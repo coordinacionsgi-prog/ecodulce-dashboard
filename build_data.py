@@ -158,7 +158,6 @@ def parse_fichas(rows):
                 out[section].append({
                     "seccion": c0,
                     "equipo": r[1],
-                    "marca": "",
                     "ancho": to_float(r[2]) if len(r) > 2 else None,
                     "largo": to_float(r[3]) if len(r) > 3 else None,
                     "alto": to_float(r[4]) if len(r) > 4 else None,

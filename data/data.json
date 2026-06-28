@@ -895,7 +895,6 @@
       {
         "seccion": "Lavadora de frasco de mermelada",
         "equipo": "Zonesun ZS-WB16",
-        "marca": "",
         "ancho": 0.85,
         "largo": 4.5,
         "alto": 1.1,
@@ -905,7 +904,6 @@
       {
         "seccion": "Detector de Metales",
         "equipo": "coso AEC500 (banda c/brazo de rechazo)",
-        "marca": "",
         "ancho": 0.85,
         "largo": 1.5,
         "alto": 0.9,
@@ -915,7 +913,6 @@
       {
         "seccion": "Cámara Frigorífica",
         "equipo": "Panel 575x575x250 (MercadoLibre)",
-        "marca": "",
         "ancho": 6.0,
         "largo": 6.0,
         "alto": 2.5,
@@ -925,7 +922,6 @@
       {
         "seccion": "Refractómetro Digital",
         "equipo": "Refractómetro Digital Brix",
-        "marca": "",
         "ancho": 0.0315,
         "largo": 0.125,
         "alto": 0.046,
@@ -935,7 +931,6 @@
       {
         "seccion": "Medidor de pH",
         "equipo": "pH-metro digital con sonda",
-        "marca": "",
         "ancho": 0.03,
         "largo": 0.15,
         "alto": 0.02,
@@ -945,7 +940,6 @@
       {
         "seccion": "Higrómetro Digital",
         "equipo": "Higrómetro digital ambiental",
-        "marca": "",
         "ancho": null,
         "largo": null,
         "alto": null,
@@ -955,7 +949,6 @@
       {
         "seccion": "Termómetro Digital con Sonda",
         "equipo": "Termómetro digital sonda inox",
-        "marca": "",
         "ancho": null,
         "largo": null,
         "alto": null,
@@ -965,7 +958,6 @@
       {
         "seccion": "Cestas Ventiladas para Frutas",
         "equipo": "Cesta ventilada plástica",
-        "marca": "",
         "ancho": 0.4,
         "largo": 0.6,
         "alto": 0.115,
