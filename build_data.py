@@ -154,14 +154,34 @@ def parse_fichas(rows):
         elif c0 in ("Sección", "Equipo"):
             continue
         elif section and c0 and len(r) >= 3:
-            out[section].append({
-                "seccion": c0,
-                "equipo": r[1],
-                "marca": r[2],
-                "ancho": to_float(r[3]) if len(r) > 3 else None,
-                "largo": to_float(r[4]) if len(r) > 4 else None,
-                "cantidad": to_float(r[11]) if section != "auxiliares" and len(r) > 11 else (to_float(r[5]) if len(r) > 5 else None),
-            })
+            if section == "auxiliares":
+                out[section].append({
+                    "seccion": c0,
+                    "equipo": r[1],
+                    "marca": "",
+                    "ancho": to_float(r[2]) if len(r) > 2 else None,
+                    "largo": to_float(r[3]) if len(r) > 3 else None,
+                    "alto": to_float(r[4]) if len(r) > 4 else None,
+                    "cantidad": to_float(r[5]) if len(r) > 5 else None,
+                    "fuente": r[6] if len(r) > 6 else "",
+                })
+            else:
+                out[section].append({
+                    "seccion": c0,
+                    "equipo": r[1],
+                    "marca": r[2],
+                    "ancho": to_float(r[3]) if len(r) > 3 else None,
+                    "largo": to_float(r[4]) if len(r) > 4 else None,
+                    "alto": to_float(r[5]) if len(r) > 5 else None,
+                    "peso": r[6] if len(r) > 6 else "",
+                    "potencia": r[7] if len(r) > 7 else "",
+                    "cap_teorica": r[8] if len(r) > 8 else "",
+                    "unidad": r[9] if len(r) > 9 else "",
+                    "rendimiento": to_float(r[10]) if len(r) > 10 else None,
+                    "cantidad": to_float(r[11]) if len(r) > 11 else None,
+                    "precio": r[12] if len(r) > 12 else "",
+                    "fuente": r[13] if len(r) > 13 else "",
+                })
     return out
 
 
@@ -189,6 +209,14 @@ def parse_materia_prima(rows):
     return out
 
 
+def read_json(name):
+    path = os.path.join(DATA_DIR, name)
+    if os.path.exists(path):
+        with open(path, encoding="utf-8") as f:
+            return json.load(f)
+    return []
+
+
 data = {
     "plan_ventas": parse_plan_ventas(read_csv("plan-de-ventas.csv")),
     "cap": parse_cap(read_csv("cap.csv")),
@@ -197,7 +225,14 @@ data = {
     "carga_distancia": parse_carga_distancia(read_csv("carga-distancia.csv")),
     "fichas_tecnicas": parse_fichas(read_csv("fichas-tecnicas.csv")),
     "materia_prima": parse_materia_prima(read_csv("materia-prima.csv")),
+    "materia_prima_fichas": read_json("materia-prima-fichas.json"),
+    "producto_fichas": read_json("producto-terminado-fichas.json"),
 }
+
+t = data["guerchet"]["totales"]
+t["TOTAL PRODUCTIVO NETO"] = round(
+    (t.get("TOTAL MERMELADAS") or 0) + (t.get("TOTAL SNACKS") or 0) + (t.get("TOTAL AUXILIARES") or 0), 3
+)
 
 out_path = os.path.join(DATA_DIR, "data.json")
 with open(out_path, "w", encoding="utf-8") as f:

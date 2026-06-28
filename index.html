@@ -45,6 +45,11 @@
   footer{text-align:center;color:var(--muted);font-size:.78rem;padding:30px;border-top:1px solid var(--border);margin-top:20px;}
   .tag-merm{color:var(--merm);} .tag-snack{color:var(--snack);}
   .note{font-size:.8rem;color:var(--muted);background:var(--panel2);border-left:3px solid var(--accent2);padding:10px 14px;border-radius:0 8px 8px 0;margin-top:10px;}
+  .ficha{background:var(--panel2);border:1px solid var(--border);border-radius:12px;padding:16px;}
+  .ficha h4{margin:0 0 10px;font-size:.95rem;color:var(--accent);}
+  .ficha dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:4px 10px;font-size:.78rem;}
+  .ficha dt{color:var(--muted);white-space:nowrap;}
+  .ficha dd{margin:0;}
 </style>
 </head>
 <body>
@@ -59,8 +64,10 @@
   <button data-tab="resumen" class="active">Resumen</button>
   <button data-tab="ventas">Plan de Ventas</button>
   <button data-tab="materia">Materia Prima</button>
+  <button data-tab="fichasmp">Fichas MP</button>
   <button data-tab="cap">CAP</button>
   <button data-tab="maquinas">Máquinas</button>
+  <button data-tab="fichasprod">Fichas Producto</button>
   <button data-tab="layout">Layout</button>
 </nav>
 
@@ -133,10 +140,23 @@
   <div class="note">Snacks: merma de Deshidratado recalculada a 93% (antes 70% en el archivo original) para cerrar matemáticamente 1,5 kg fruta fresca → 90 g producto final (ratio 16,7:1 confirmado por el equipo).</div>
 </section>
 
-<section id="cap">
+<section id="fichasmp">
   <div class="panel">
-    <h2>Aprovechamiento de capacidad por sección y horizonte</h2>
-    <div class="chart-wrap" style="height:420px"><canvas id="chart-cap"></canvas></div>
+    <h2>Fichas Técnicas de Materia Prima (9 frutas)</h2>
+    <div class="grid" id="fichas-mp-grid"></div>
+  </div>
+</section>
+
+<section id="cap">
+  <div class="two-col">
+    <div class="panel">
+      <h2 class="tag-merm">Aprovechamiento — Mermeladas (Año 10)</h2>
+      <div class="chart-wrap"><canvas id="chart-cap-merm"></canvas></div>
+    </div>
+    <div class="panel">
+      <h2 class="tag-snack">Aprovechamiento — Snacks (Año 8)</h2>
+      <div class="chart-wrap"><canvas id="chart-cap-snack"></canvas></div>
+    </div>
   </div>
   <div class="panel">
     <h2>Detalle CAP</h2>
@@ -146,12 +166,27 @@
 
 <section id="maquinas">
   <div class="panel">
-    <h2 class="tag-merm">Línea Mermeladas — Año 10</h2>
-    <table id="tabla-fichas-merm"></table>
+    <h2 class="tag-merm">Línea Mermeladas — Fichas Técnicas de Máquinas</h2>
+    <div class="grid" id="fichas-maquinas-merm"></div>
   </div>
   <div class="panel">
-    <h2 class="tag-snack">Línea Snacks — Año 8</h2>
-    <table id="tabla-fichas-snack"></table>
+    <h2 class="tag-snack">Línea Snacks — Fichas Técnicas de Máquinas</h2>
+    <div class="grid" id="fichas-maquinas-snack"></div>
+  </div>
+  <div class="panel">
+    <h2>Equipos Auxiliares y de Laboratorio</h2>
+    <div class="grid" id="fichas-maquinas-aux"></div>
+  </div>
+</section>
+
+<section id="fichasprod">
+  <div class="panel">
+    <h2 class="tag-merm">🫙 Mermeladas — Fichas Técnicas de Producto</h2>
+    <div class="grid" id="fichas-prod-merm"></div>
+  </div>
+  <div class="panel">
+    <h2 class="tag-snack">🍌 Snacks — Fichas Técnicas de Producto</h2>
+    <div class="grid" id="fichas-prod-snack"></div>
   </div>
 </section>
 

@@ -21,7 +21,7 @@ async function init() {
   document.getElementById('updated-badge').textContent =
     'Datos sincronizados desde Google Sheets · ' + new Date().toLocaleDateString('es-AR', { day: '2-digit', month: 'long', year: 'numeric' });
 
-  [buildResumen, buildVentas, buildMateriaPrima, buildCAP, buildMaquinas, buildLayout].forEach(fn => {
+  [buildResumen, buildVentas, buildMateriaPrima, buildFichasMP, buildCAP, buildMaquinas, buildFichasProducto, buildLayout].forEach(fn => {
     try { fn(); } catch (e) { console.error('Error en ' + fn.name + ':', e); }
   });
   setupNav();
@@ -35,7 +35,9 @@ function setupNav() {
       document.querySelectorAll('main section').forEach(s => s.classList.remove('active'));
       btn.classList.add('active');
       document.getElementById(btn.dataset.tab).classList.add('active');
-      requestAnimationFrame(() => Object.values(Chart.instances).forEach(c => c.resize()));
+      const doResize = () => Object.values(Chart.instances).forEach(c => c.resize());
+      requestAnimationFrame(doResize);
+      setTimeout(doResize, 60);
     });
   });
 }
@@ -135,14 +137,19 @@ function buildCAP() {
   const bloques = DATA.cap;
   // Tomamos el horizonte final de cada linea: Mermeladas Año10 (idx2), Snacks Año8 (idx5)
   const merm10 = bloques[2], snack8 = bloques[5];
-  const ctx = document.getElementById('chart-cap');
-  new Chart(ctx, {
+  new Chart('chart-cap-merm', {
     type: 'bar',
     data: {
       labels: merm10.secciones.map(s => s.seccion),
-      datasets: [
-        { label: 'Mermeladas Año 10 (%)', data: merm10.secciones.map(s => +(s.aprovechamiento * 100).toFixed(1)), backgroundColor: COLORS.merm, borderRadius: 4 },
-      ]
+      datasets: [{ label: 'Mermeladas Año 10 (%)', data: merm10.secciones.map(s => +(s.aprovechamiento * 100).toFixed(1)), backgroundColor: COLORS.merm, borderRadius: 4 }]
+    },
+    options: { ...baseOpts(v => v + '%'), scales: { y: { max: 110, grid: { color: COLORS.grid } } } }
+  });
+  new Chart('chart-cap-snack', {
+    type: 'bar',
+    data: {
+      labels: snack8.secciones.map(s => s.seccion),
+      datasets: [{ label: 'Snacks Año 8 (%)', data: snack8.secciones.map(s => +(s.aprovechamiento * 100).toFixed(1)), backgroundColor: COLORS.snack, borderRadius: 4 }]
     },
     options: { ...baseOpts(v => v + '%'), scales: { y: { max: 110, grid: { color: COLORS.grid } } } }
   });
@@ -157,13 +164,88 @@ function buildCAP() {
   document.getElementById('cap-tables').innerHTML = tables;
 }
 
+function maquinaCard(m) {
+  return `<div class="ficha">
+    <h4>${m.seccion} — ${m.equipo}</h4>
+    <dl>
+      <dt>Marca/Modelo</dt><dd>${m.marca || '—'}</dd>
+      <dt>Dimensiones</dt><dd>${fmt(m.ancho,2)} × ${fmt(m.largo,2)} × ${fmt(m.alto,2)} m</dd>
+      <dt>Peso</dt><dd>${m.peso || '—'}</dd>
+      <dt>Potencia</dt><dd>${m.potencia || '—'}</dd>
+      <dt>Capacidad</dt><dd>${m.cap_teorica || '—'} ${m.unidad || ''}</dd>
+      <dt>Rendimiento</dt><dd>${pct(m.rendimiento)}</dd>
+      <dt>Cantidad en planta</dt><dd>${fmt(m.cantidad)}</dd>
+      <dt>Precio</dt><dd>${m.precio || '—'}</dd>
+      <dt>Fuente</dt><dd>${m.fuente || '—'}</dd>
+    </dl>
+  </div>`;
+}
+function auxCard(m) {
+  return `<div class="ficha">
+    <h4>${m.equipo}</h4>
+    <dl>
+      <dt>Dimensiones</dt><dd>${fmt(m.ancho,2)} × ${fmt(m.largo,2)} × ${fmt(m.alto,2)} m</dd>
+      <dt>Cantidad</dt><dd>${fmt(m.cantidad)}</dd>
+      <dt>Fuente</dt><dd>${m.fuente || '—'}</dd>
+    </dl>
+  </div>`;
+}
 function buildMaquinas() {
   const f = DATA.fichas_tecnicas;
-  const rowsMerm = f.mermeladas.map(m => `<tr><td>${m.seccion}</td><td>${m.equipo}</td><td>${m.marca}</td><td>${m.ancho}×${m.largo} m</td><td>${fmt(m.cantidad)}</td></tr>`).join('');
-  const rowsSnack = f.snacks.map(m => `<tr><td>${m.seccion}</td><td>${m.equipo}</td><td>${m.marca}</td><td>${m.ancho}×${m.largo} m</td><td>${fmt(m.cantidad)}</td></tr>`).join('');
-  const head = `<tr><th>Sección</th><th>Equipo</th><th>Marca / Modelo</th><th>Dimensiones</th><th>Cant.</th></tr>`;
-  document.getElementById('tabla-fichas-merm').innerHTML = head + rowsMerm;
-  document.getElementById('tabla-fichas-snack').innerHTML = head + rowsSnack;
+  document.getElementById('fichas-maquinas-merm').innerHTML = f.mermeladas.map(maquinaCard).join('');
+  document.getElementById('fichas-maquinas-snack').innerHTML = f.snacks.map(maquinaCard).join('');
+  document.getElementById('fichas-maquinas-aux').innerHTML = f.auxiliares.map(auxCard).join('');
+}
+
+function buildFichasMP() {
+  const cards = DATA.materia_prima_fichas.map(f => `
+    <div class="ficha">
+      <h4>${f.fruta}</h4>
+      <dl>
+        <dt>Destino</dt><dd>${f.producto_destino || '—'}</dd>
+        <dt>Origen</dt><dd>${f.origen || '—'}</dd>
+        <dt>Estacionalidad</dt><dd>${f.estacionalidad || '—'}</dd>
+        <dt>Color</dt><dd>${f.color || '—'}</dd>
+        <dt>Aroma</dt><dd>${f.aroma || '—'}</dd>
+        <dt>Textura</dt><dd>${f.textura || '—'}</dd>
+        <dt>°Brix</dt><dd>${f.brix || '—'}</dd>
+        <dt>pH</dt><dd>${f.ph || '—'}</dd>
+        <dt>Humedad</dt><dd>${f.humedad || '—'}</dd>
+        <dt>Calibre</dt><dd>${f.calibre || '—'}</dd>
+        <dt>Criterio aceptación</dt><dd>${f.criterio_aceptacion || '—'}</dd>
+        <dt>Almacenamiento</dt><dd>${f.almacenamiento || '—'}</dd>
+        <dt>Tiempo máx.</dt><dd>${f.tiempo_max || '—'}</dd>
+      </dl>
+    </div>`).join('');
+  document.getElementById('fichas-mp-grid').innerHTML = cards;
+}
+
+function buildFichasProducto() {
+  const merm = DATA.producto_fichas.filter(p => p.producto.includes('Mermelada'));
+  const snack = DATA.producto_fichas.filter(p => p.producto.includes('Snack'));
+  const card = p => `
+    <div class="ficha">
+      <h4>${p.denominacion}</h4>
+      <dl>
+        <dt>Composición</dt><dd>${p.composicion || '—'}</dd>
+        <dt>Color</dt><dd>${p.color || '—'}</dd>
+        <dt>Sabor</dt><dd>${p.sabor || '—'}</dd>
+        <dt>pH</dt><dd>${p.ph || '—'}</dd>
+        <dt>°Brix / Aw</dt><dd>${p.brix || '—'}</dd>
+        <dt>Humedad</dt><dd>${p.humedad || '—'}</dd>
+        <dt>Energía (100g)</dt><dd>${p.kcal_100g || '—'}</dd>
+        <dt>Carbohidratos</dt><dd>${p.carbs_100g || '—'}</dd>
+        <dt>Azúcares</dt><dd>${p.azucares_100g || '—'}</dd>
+        <dt>Proteínas</dt><dd>${p.proteinas_100g || '—'}</dd>
+        <dt>Grasas</dt><dd>${p.grasas_100g || '—'}</dd>
+        <dt>Fibra</dt><dd>${p.fibra_100g || '—'}</dd>
+        <dt>Sodio</dt><dd>${p.sodio_100g || '—'}</dd>
+        <dt>Envasado</dt><dd>${p.envasado || '—'}</dd>
+        <dt>Vida útil</dt><dd>${p.vida_util || '—'}</dd>
+      </dl>
+    </div>`;
+  document.getElementById('fichas-prod-merm').innerHTML = merm.map(card).join('');
+  document.getElementById('fichas-prod-snack').innerHTML = snack.map(card).join('');
 }
 
 function buildLayout() {
