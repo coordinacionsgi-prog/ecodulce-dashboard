@@ -1,0 +1,32 @@
+"FICHAS TÉCNICAS DE MÁQUINAS — consolidado (Cantidad necesaria vinculada a CAP, horizonte final de cada línea)",,,,,,,,,,,,,
+,,,,,,,,,,,,,
+LÍNEA MERMELADAS — horizonte Año 10,,,,,,,,,,,,,
+Sección,Equipo,Marca / Modelo,Ancho (m),Largo (m),Alto (m),Peso,Potencia,Cap. Teórica,Unidad,Rendimiento,Cantidad necesaria,Precio,Fuente
+Limpieza,Lavadora de Frutas (Mermeladas),Agroshow — Industrial Belt Washer,0.9,2.5,1.1,~400 kg,4 kW,400,kg/h,0.8,1,USD 10.000 (aprox.),"Ficha creada — gap cubierto, ver pestaña en Drive"
+Pelado,Peladora Industrial,Mazin — Peladora Continua,0.6,1.8,1.1,~280 kg,4 kW,220,kg/h,0.8,2,A confirmar con proveedor,mazinindustrial.com.ar
+Descarozado,Descarozadora de Durazno,Gelgoog — Fruit Core Remove Machine,0.5,1.2,0.9,~120 kg,1.5 kW,200,kg/h,0.8,2,USD 3.000–5.000 (aprox.),gelgoogmachinery.com
+Pulpeado,Trituradora / Pulpeadora,Maritastills — Jolly 60 Reverse,0.7,1.5,1,~200 kg,3 kW,180,kg/h,0.8,2,USD 6.000–9.000 (aprox.),maritastills.es
+Cocción,Marmita de Cocción Eléctrica,Coolvi — ICOS Professional,0.9,1.2,0.9,~350 kg,18 kW,200,kg/h,0.8,1,USD 10.000–15.000 (aprox.),coolvi.es
+Llenado,Llenadora – Tapadora Automática,Cadec,0.8,3,1.5,~600 kg,5 kW,"200 (≈666,7 frascos/h)",kg/h,0.8,1,A confirmar con proveedor,cadec.com.ar
+Etiquetado,Etiquetadora Automática,Cadec AC-160-3R,0.5,1.8,1.2,~250 kg,2 kW,350,unid/h,0.8,2,A confirmar con proveedor,cadec.com.ar
+Pasteurizado,Pasteurizador Túnel,Zonesun ZS-PM2,0.8,4,1.4,~500 kg,12 kW,400,unid/h,0.8,2,USD 8.000–14.000 (aprox.),zonesun.com
+,,,,,,,,,,,,,
+LÍNEA SNACKS — horizonte Año 8,,,,,,,,,,,,,
+Sección,Equipo,Marca / Modelo,Ancho (m),Largo (m),Alto (m),Peso,Potencia,Cap. Teórica,Unidad,Rendimiento,Cantidad necesaria,Precio,Fuente
+Limpieza,Lavadora de Frutas,Agroshow — Industrial Belt Washer,1,3,1.2,~500 kg,5 kW,280,kg/h,0.8,2,USD 15.000 (aprox.),agroshow.info
+Pelado,Peladora Industrial de bananas,Vice,1.85,2.86,1.52,~280 kg,2 kW,600,kg/h,0.8,1,A confirmar con proveedor,vicmachine.com
+Descarozado,Descarozadora (comparte ficha con Mermeladas),Gelgoog,0.5,1.2,0.9,~120 kg,1.5 kW,200,kg/h,0.8,3,USD 3.000–5.000 (aprox.),gelgoogmachinery.com
+Cortado,Cortadora de Vegetales Industrial,Jegerings,0.6,1.2,0.9,~200 kg,3 kW,600,kg/h,0.8,1,USD 5.000–8.000 (aprox.),jegerings.com
+Deshidratado,Deshidratador Túnel de Microondas al Vacío,MVD-100 (≥1.100 kg/h),0.85,6.8,2.3,~2.000 kg (por módulo),100–200 kW,1000,kg/h por módulo,0.85,1,USD 80.000–120.000 (por módulo),Alibaba / importación directa
+Envasado,Envasadora VFFS (Snack),Weigma MV100 IFT,0.7,1.5,2.2,~450 kg,4 kW,1000,bolsas/h,0.8,1,USD 12.000–18.000 (aprox.),weigmastore.com
+,,,,,,,,,,,,,
+"EQUIPOS AUXILIARES Y DE LABORATORIO (no entran en el CAP de proceso, ocupan superficie para Guerchet)",,,,,,,,,,,,,
+Equipo,Marca / Modelo,Ancho (m),Largo (m),Alto (m),Cantidad en planta,Fuente,,,,,,,
+Lavadora de frasco de mermelada,Zonesun ZS-WB16,0.85,4.5,1.1,1,zonesunpack.com,,,,,,,
+Detector de Metales,coso AEC500 (banda c/brazo de rechazo),0.85,1.5,0.9,1,egecol.com,,,,,,,
+Cámara Frigorífica,Panel 575x575x250 (MercadoLibre),6,6,2.5,1,MercadoLibre MLA-1676401300,,,,,,,
+Refractómetro Digital,Refractómetro Digital Brix,0.0315,0.125,0.046,2,—,,,,,,,
+Medidor de pH,pH-metro digital con sonda,0.03,0.15,0.02,2,—,,,,,,,
+Higrómetro Digital,Higrómetro digital ambiental,—,—,—,3,—,,,,,,,
+Termómetro Digital con Sonda,Termómetro digital sonda inox,—,—,—,3,—,,,,,,,
+Cestas Ventiladas para Frutas,Cesta ventilada plástica,0.4,0.6,0.115,125,Proveedor local,,,,,,,

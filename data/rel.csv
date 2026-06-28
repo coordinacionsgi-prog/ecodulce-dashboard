@@ -1,0 +1,70 @@
+DIAGRAMA DE RELACIONES (REL) — Método SLP de Muther (vinculado a Guerchet para superficies),,,,
+,,,,
+CÓDIGOS DE CERCANÍA,,,,
+Código,Significado,Criterio,,
+A,Imprescindible,Flujo directo secuencial de materiales — debe estar físicamente adyacente,,
+E,Muy importante,"Fuerte dependencia operativa (control de calidad en proceso crítico, coordinación logística)",,
+I,Importante,Dependencia útil pero no crítica,,
+O,Normal,"Cercanía conveniente, sin impacto significativo",,
+U,Sin importancia,No hay razón técnica para cercanía o lejanía,,
+X,No deseable,"Riesgo BPM, contaminación cruzada, violación normativa SENASA",,
+,,,,
+SECTORES DE PLANTA (17 sectores),,,,
+Código,Nombre,Zona BPM,Superficie (m²),Fuente
+S01,Recepción Materia Prima,Zona Sucia,15,Estimado
+S02,Almacén Materia Prima,Zona Sucia,30,Estimado (a ajustar con dimensionamiento de stock/cámara)
+S03,Pesado / Selección,Zona Sucia,2,"Estimado (balanza industrial, sin ficha dedicada)"
+S04,Limpieza / Lavado (Mermeladas+Snacks),Zona Sucia,37.125,Guerchet
+S05,Pelado (Mermeladas+Snacks),Zona Sucia,33.5295,Guerchet
+S06,Descarozado (Mermeladas+Snacks),Zona Sucia,13.5,Guerchet
+S07,Corte / Pulpeado (Mermeladas+Snacks),Zona Sucia,12.69,Guerchet
+S08M,Cocción Mermeladas,Zona Limpia,4.86,Guerchet
+S08S,Deshidratado Snacks,Zona Limpia,17.34,Guerchet
+S09M,Envasado / Llenado Mermeladas,Zona Limpia,10.8,Guerchet
+S09S,Envasado Snacks (VFFS),Zona Limpia,4.725,Guerchet
+S10,Pasteurizado,Zona Limpia,19.2,Guerchet
+S11,Etiquetado / Empaque,Zona Limpia,8.1,Guerchet
+S12,Almacén Producto Terminado,Zona Limpia,40,Estimado (a ajustar con dimensionamiento de stock)
+S13,Control de Calidad / Laboratorio,Zona Limpia,20.7375,Estimado base 15 m² + Detector de Metales (Guerchet)
+S14,Vestuarios / Barrera Sanitaria,Transición BPM,12,Estimado
+S15,Oficinas / Administración,Administración,20,Estimado
+TOTAL SUPERFICIE SECTORES,148.7045,,,
+,,,,
+RELACIONES A (Imprescindible) — flujo secuencial de materiales,,,,
+Sector A,Sector B,Justificación,,
+S01 Recepción MP,S02 Almacén MP,Recepción descarga directamente en almacén. Flujo físico continuo,,
+S02 Almacén MP,S03 Pesado/Selección,MP pasa de almacén a pesado antes de cada batch,,
+S03 Pesado/Selección,S04 Limpieza/Lavado,Pesado precede inmediatamente al lavado,,
+S04 Limpieza/Lavado,S05 Pelado,"Fruta lavada pasa a pelado continuo, sin almacenamiento intermedio",,
+S05 Pelado,S06 Descarozado,Fruta pelada ingresa a descarozado en línea continua,,
+S06 Descarozado,S07 Corte/Pulpeado,Fruta descarozada pasa inmediatamente a corte/pulpeado,,
+S07 Corte/Pulpeado,S08M Cocción Mermeladas,Pulpa ingresa directamente a la marmita,,
+S07 Corte/Pulpeado,S08S Deshidratado Snacks,Fruta cortada ingresa directamente al túnel de microondas,,
+S08M Cocción,S09M Envasado Mermeladas,Mermelada cocida se envasa en caliente (máx. 15 min),,
+S08S Deshidratado,S09S Envasado Snacks,Snack deshidratado pasa a envasado sin almacenamiento intermedio,,
+S09M Envasado Mermeladas,S10 Pasteurizado,Frascos envasados ingresan al pasteurizador inmediatamente,,
+S09S Envasado Snacks,S11 Etiquetado/Empaque,Snacks envasados pasan a etiquetado/empaque,,
+S10 Pasteurizado,S11 Etiquetado/Empaque,Frascos pasteurizados pasan a etiquetado en línea,,
+S11 Etiquetado/Empaque,S12 Almacén PT,Producto etiquetado se paletiza y transfiere a almacén PT,,
+,,,,
+RELACIONES E (Muy importante) — control de calidad,,,,
+Sector A,Sector B,Justificación,,
+S01 Recepción MP,S13 CC/Laboratorio,CC analiza muestras de cada partida de MP antes de liberar al proceso,,
+S08M Cocción,S13 CC/Laboratorio,"CC controla Brix, pH y temperatura en puntos críticos (HACCP)",,
+S09M Envasado Mermeladas,S13 CC/Laboratorio,"CC verifica torque de tapa, peso neto y hermeticidad",,
+S09S Envasado Snacks,S13 CC/Laboratorio,CC controla humedad residual y peso de bolsa,,
+,,,,
+RELACIONES X (No deseable) — riesgo BPM / contaminación cruzada,,,,
+Sector A,Sector B,Consecuencia si se viola,,
+S01 Recepción MP,S12 Almacén PT,"Contaminación cruzada MP/PT — observación SENASA, riesgo de suspensión de habilitación",,
+S01 Recepción MP,S09M Envasado Mermeladas,Aerosoles de zona sucia contaminan línea de envasado en caliente,,
+S04 Limpieza/Lavado,S09M Envasado Mermeladas,Agua de lavado y aerosoles alcanzan área de envasado,,
+S04 Limpieza/Lavado,S09S Envasado Snacks,Ídem para línea Snacks,,
+S05 Pelado,S09M Envasado Mermeladas,Residuos orgánicos del pelado contaminan el área de envasado,,
+S05 Pelado,S09S Envasado Snacks,Ídem para línea Snacks,,
+,,,,
+ZONIFICACIÓN BPM (SENASA),,,,
+Zona,Sectores incluidos,Requisito de separación,,
+Zona Sucia,"S01, S02, S03, S04, S05, S06, S07",Barrera sanitaria obligatoria antes de Zona Limpia (S14),,
+Zona Limpia,"S08M, S08S, S09M, S09S, S10, S11, S12","Solo personal con indumentaria limpia, sin retorno a Zona Sucia sin cambio",,
+Transición,"S13 (CC/Lab), S14 (Vestuarios/Barrera)",S14 es la barrera física; S13 accede a ambas zonas con protocolo de indumentaria,,

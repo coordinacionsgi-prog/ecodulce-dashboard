@@ -1,0 +1,951 @@
+{
+  "plan_ventas": {
+    "mermeladas": [
+      {
+        "anio": 1,
+        "unidades": 635678.0,
+        "mercado": 0.02,
+        "usd": 2506257.35
+      },
+      {
+        "anio": 2,
+        "unidades": 794597.1,
+        "mercado": 0.025,
+        "usd": 3132820.11
+      },
+      {
+        "anio": 3,
+        "unidades": 953516.52,
+        "mercado": 0.03,
+        "usd": 3759384.13
+      },
+      {
+        "anio": 4,
+        "unidades": 1112435.94,
+        "mercado": 0.035,
+        "usd": 4385948.15
+      },
+      {
+        "anio": 5,
+        "unidades": 1907033.04,
+        "mercado": 0.06,
+        "usd": 7518768.26
+      },
+      {
+        "anio": 6,
+        "unidades": 2065952.46,
+        "mercado": 0.065,
+        "usd": 8145332.28
+      },
+      {
+        "anio": 7,
+        "unidades": 2224871.88,
+        "mercado": 0.07,
+        "usd": 8771896.3
+      },
+      {
+        "anio": 8,
+        "unidades": 2383791.3,
+        "mercado": 0.075,
+        "usd": 9398460.32
+      },
+      {
+        "anio": 9,
+        "unidades": 2542710.72,
+        "mercado": 0.08,
+        "usd": 10025024.34
+      },
+      {
+        "anio": 10,
+        "unidades": 2701630.14,
+        "mercado": 0.085,
+        "usd": 10651588.37
+      }
+    ],
+    "snacks": [
+      {
+        "anio": 1,
+        "unidades": 407611.11,
+        "mercado": 0.05,
+        "usd": 876583.03
+      },
+      {
+        "anio": 2,
+        "unidades": 448372.22,
+        "mercado": 0.055,
+        "usd": 964241.34
+      },
+      {
+        "anio": 3,
+        "unidades": 489133.33,
+        "mercado": 0.06,
+        "usd": 1051899.64
+      },
+      {
+        "anio": 4,
+        "unidades": 529894.44,
+        "mercado": 0.065,
+        "usd": 1139557.95
+      },
+      {
+        "anio": 5,
+        "unidades": 978266.67,
+        "mercado": 0.12,
+        "usd": 2103799.28
+      },
+      {
+        "anio": 6,
+        "unidades": 1019027.78,
+        "mercado": 0.125,
+        "usd": 2191457.59
+      },
+      {
+        "anio": 7,
+        "unidades": 1059788.89,
+        "mercado": 0.13,
+        "usd": 2279115.89
+      },
+      {
+        "anio": 8,
+        "unidades": 1100550.0,
+        "mercado": 0.135,
+        "usd": 2366774.19
+      },
+      {
+        "anio": 9,
+        "unidades": 1141311.11,
+        "mercado": 0.14,
+        "usd": 2454432.5
+      },
+      {
+        "anio": 10,
+        "unidades": 1182072.22,
+        "mercado": 0.145,
+        "usd": 2542090.8
+      }
+    ]
+  },
+  "cap": [
+    {
+      "titulo": "CAP — LÍNEA MERMELADAS — AÑO 1 (1 turno, 1.912 h)",
+      "secciones": [
+        {
+          "seccion": "Limpieza",
+          "unidad": "kg",
+          "requerido": 244100.352,
+          "maquinas": 1.0,
+          "aprovechamiento": 0.3989610879
+        },
+        {
+          "seccion": "Pelado",
+          "unidad": "kg",
+          "requerido": 241659.3485,
+          "maquinas": 1.0,
+          "aprovechamiento": 0.7181299582
+        },
+        {
+          "seccion": "Descarozado",
+          "unidad": "kg",
+          "requerido": 222326.6006,
+          "maquinas": 1.0,
+          "aprovechamiento": 0.7267475177
+        },
+        {
+          "seccion": "Pulpeado",
+          "unidad": "kg",
+          "requerido": 200093.9405,
+          "maquinas": 1.0,
+          "aprovechamiento": 0.7267475177
+        },
+        {
+          "seccion": "Cocción",
+          "unidad": "kg",
+          "requerido": 200093.9405,
+          "maquinas": 1.0,
+          "aprovechamiento": 0.6540727659
+        },
+        {
+          "seccion": "Llenado",
+          "unidad": "frascos",
+          "requerido": 635678.0,
+          "maquinas": 1.0,
+          "aprovechamiento": 0.6233735829
+        },
+        {
+          "seccion": "Etiquetado",
+          "unidad": "frascos",
+          "requerido": 635678.0,
+          "maquinas": 2.0,
+          "aprovechamiento": 0.593692095
+        },
+        {
+          "seccion": "Pasteurizado",
+          "unidad": "frascos",
+          "requerido": 635678.0,
+          "maquinas": 2.0,
+          "aprovechamiento": 0.5194805832
+        }
+      ]
+    },
+    {
+      "titulo": "CAP — LÍNEA MERMELADAS — AÑO 5 (2 turnos, 3.824 h)",
+      "secciones": [
+        {
+          "seccion": "Limpieza",
+          "unidad": "kg",
+          "requerido": 732300.6874,
+          "maquinas": 1.0,
+          "aprovechamiento": 0.5984413305
+        },
+        {
+          "seccion": "Pelado",
+          "unidad": "kg",
+          "requerido": 724977.6805,
+          "maquinas": 2.0,
+          "aprovechamiento": 0.5385971975
+        },
+        {
+          "seccion": "Descarozado",
+          "unidad": "kg",
+          "requerido": 666979.466,
+          "maquinas": 2.0,
+          "aprovechamiento": 0.5450603639
+        },
+        {
+          "seccion": "Pulpeado",
+          "unidad": "kg",
+          "requerido": 600281.5194,
+          "maquinas": 2.0,
+          "aprovechamiento": 0.5450603639
+        },
+        {
+          "seccion": "Cocción",
+          "unidad": "kg",
+          "requerido": 600281.5194,
+          "maquinas": 1.0,
+          "aprovechamiento": 0.9811086549
+        },
+        {
+          "seccion": "Llenado",
+          "unidad": "frascos",
+          "requerido": 1907033.04,
+          "maquinas": 1.0,
+          "aprovechamiento": 0.9350599037
+        },
+        {
+          "seccion": "Etiquetado",
+          "unidad": "frascos",
+          "requerido": 1907033.04,
+          "maquinas": 2.0,
+          "aprovechamiento": 0.8905376943
+        },
+        {
+          "seccion": "Pasteurizado",
+          "unidad": "frascos",
+          "requerido": 1907033.04,
+          "maquinas": 2.0,
+          "aprovechamiento": 0.7792204825
+        }
+      ]
+    },
+    {
+      "titulo": "CAP — LÍNEA MERMELADAS — AÑO 10 (3 turnos, 5.736 h)",
+      "secciones": [
+        {
+          "seccion": "Limpieza",
+          "unidad": "kg",
+          "requerido": 1037425.974,
+          "maquinas": 1.0,
+          "aprovechamiento": 0.56519459
+        },
+        {
+          "seccion": "Pelado",
+          "unidad": "kg",
+          "requerido": 1027051.714,
+          "maquinas": 2.0,
+          "aprovechamiento": 0.508675131
+        },
+        {
+          "seccion": "Descarozado",
+          "unidad": "kg",
+          "requerido": 944887.5769,
+          "maquinas": 2.0,
+          "aprovechamiento": 0.5147792325
+        },
+        {
+          "seccion": "Pulpeado",
+          "unidad": "kg",
+          "requerido": 850398.8192,
+          "maquinas": 2.0,
+          "aprovechamiento": 0.5147792325
+        },
+        {
+          "seccion": "Cocción",
+          "unidad": "kg",
+          "requerido": 850398.8192,
+          "maquinas": 1.0,
+          "aprovechamiento": 0.9266026186
+        },
+        {
+          "seccion": "Llenado",
+          "unidad": "frascos",
+          "requerido": 2701630.14,
+          "maquinas": 1.0,
+          "aprovechamiento": 0.8831121312
+        },
+        {
+          "seccion": "Etiquetado",
+          "unidad": "frascos",
+          "requerido": 2701630.14,
+          "maquinas": 2.0,
+          "aprovechamiento": 0.8410633779
+        },
+        {
+          "seccion": "Pasteurizado",
+          "unidad": "frascos",
+          "requerido": 2701630.14,
+          "maquinas": 2.0,
+          "aprovechamiento": 0.7359304557
+        }
+      ]
+    },
+    {
+      "titulo": "CAP — LÍNEA SNACKS — AÑO 1 (1 turno, 1.912 h)",
+      "secciones": [
+        {
+          "seccion": "Limpieza",
+          "unidad": "kg",
+          "requerido": 586959.9984,
+          "maquinas": 2.0,
+          "aprovechamiento": 0.6852398367
+        },
+        {
+          "seccion": "Pelado",
+          "unidad": "kg",
+          "requerido": 581090.3984,
+          "maquinas": 1.0,
+          "aprovechamiento": 0.6331616092
+        },
+        {
+          "seccion": "Descarozado",
+          "unidad": "kg",
+          "requerido": 581090.3984,
+          "maquinas": 2.0,
+          "aprovechamiento": 0.9497424137
+        },
+        {
+          "seccion": "Cortado",
+          "unidad": "kg",
+          "requerido": 522981.3586,
+          "maquinas": 1.0,
+          "aprovechamiento": 0.5698454482
+        },
+        {
+          "seccion": "Deshidratado",
+          "unidad": "kg",
+          "requerido": 522981.3586,
+          "maquinas": 1.0,
+          "aprovechamiento": 0.3217950767
+        },
+        {
+          "seccion": "Envasado",
+          "unidad": "bolsas",
+          "requerido": 407611.11,
+          "maquinas": 1.0,
+          "aprovechamiento": 0.2664821587
+        }
+      ]
+    },
+    {
+      "titulo": "CAP — LÍNEA SNACKS — AÑO 4 (1 turno, 1.912 h)",
+      "secciones": [
+        {
+          "seccion": "Limpieza",
+          "unidad": "kg",
+          "requerido": 763047.9936,
+          "maquinas": 2.0,
+          "aprovechamiento": 0.8908117827
+        },
+        {
+          "seccion": "Pelado",
+          "unidad": "kg",
+          "requerido": 755417.5137,
+          "maquinas": 1.0,
+          "aprovechamiento": 0.8231100872
+        },
+        {
+          "seccion": "Descarozado",
+          "unidad": "kg",
+          "requerido": 755417.5137,
+          "maquinas": 3.0,
+          "aprovechamiento": 0.8231100872
+        },
+        {
+          "seccion": "Cortado",
+          "unidad": "kg",
+          "requerido": 679875.7623,
+          "maquinas": 1.0,
+          "aprovechamiento": 0.7407990785
+        },
+        {
+          "seccion": "Deshidratado",
+          "unidad": "kg",
+          "requerido": 679875.7623,
+          "maquinas": 1.0,
+          "aprovechamiento": 0.4183335973
+        },
+        {
+          "seccion": "Envasado",
+          "unidad": "bolsas",
+          "requerido": 529894.44,
+          "maquinas": 1.0,
+          "aprovechamiento": 0.3464268044
+        }
+      ]
+    },
+    {
+      "titulo": "CAP — LÍNEA SNACKS — AÑO 8 (2 turnos, 3.824 h)",
+      "secciones": [
+        {
+          "seccion": "Limpieza",
+          "unidad": "kg",
+          "requerido": 1584792.0,
+          "maquinas": 2.0,
+          "aprovechamiento": 0.9250737821
+        },
+        {
+          "seccion": "Pelado",
+          "unidad": "kg",
+          "requerido": 1568944.08,
+          "maquinas": 1.0,
+          "aprovechamiento": 0.8547681747
+        },
+        {
+          "seccion": "Descarozado",
+          "unidad": "kg",
+          "requerido": 1568944.08,
+          "maquinas": 3.0,
+          "aprovechamiento": 0.8547681747
+        },
+        {
+          "seccion": "Cortado",
+          "unidad": "kg",
+          "requerido": 1412049.672,
+          "maquinas": 1.0,
+          "aprovechamiento": 0.7692913572
+        },
+        {
+          "seccion": "Deshidratado",
+          "unidad": "kg",
+          "requerido": 1412049.672,
+          "maquinas": 1.0,
+          "aprovechamiento": 0.4344233547
+        },
+        {
+          "seccion": "Envasado",
+          "unidad": "bolsas",
+          "requerido": 1100550.0,
+          "maquinas": 1.0,
+          "aprovechamiento": 0.3597509153
+        }
+      ]
+    }
+  ],
+  "guerchet": {
+    "mermeladas": [
+      {
+        "nombre": "Limpieza",
+        "m2": 10.125,
+        "maquinas": 1.0
+      },
+      {
+        "nombre": "Pelado",
+        "m2": 9.72,
+        "maquinas": 2.0
+      },
+      {
+        "nombre": "Descarozado",
+        "m2": 5.4,
+        "maquinas": 2.0
+      },
+      {
+        "nombre": "Pulpeado",
+        "m2": 9.45,
+        "maquinas": 2.0
+      },
+      {
+        "nombre": "Cocción",
+        "m2": 4.86,
+        "maquinas": 1.0
+      },
+      {
+        "nombre": "Llenado",
+        "m2": 10.8,
+        "maquinas": 1.0
+      },
+      {
+        "nombre": "Etiquetado",
+        "m2": 8.1,
+        "maquinas": 2.0
+      },
+      {
+        "nombre": "Pasteurizado",
+        "m2": 19.2,
+        "maquinas": 2.0
+      }
+    ],
+    "snacks": [
+      {
+        "nombre": "Limpieza",
+        "m2": 27.0,
+        "maquinas": 2.0
+      },
+      {
+        "nombre": "Pelado",
+        "m2": 23.8095,
+        "maquinas": 1.0
+      },
+      {
+        "nombre": "Descarozado",
+        "m2": 8.1,
+        "maquinas": 3.0
+      },
+      {
+        "nombre": "Cortado",
+        "m2": 3.24,
+        "maquinas": 1.0
+      },
+      {
+        "nombre": "Deshidratado",
+        "m2": 17.34,
+        "maquinas": 1.0
+      },
+      {
+        "nombre": "Envasado",
+        "m2": 4.725,
+        "maquinas": 1.0
+      }
+    ],
+    "auxiliares": [
+      {
+        "nombre": "Lavadora de frascos",
+        "m2": 11.475,
+        "maquinas": 1.0
+      },
+      {
+        "nombre": "Detector de Metales",
+        "m2": 5.7375,
+        "maquinas": 1.0
+      },
+      {
+        "nombre": "Cámara Frigorífica",
+        "m2": 36.0,
+        "maquinas": 1.0
+      }
+    ],
+    "totales": {
+      "TOTAL MERMELADAS": 77.655,
+      "TOTAL SNACKS": 84.2145,
+      "TOTAL AUXILIARES": 53.2125,
+      "TOTAL PRODUCTIVO NETO": 215.082
+    }
+  },
+  "rel": [
+    {
+      "codigo": "S01",
+      "nombre": "Recepción Materia Prima",
+      "zona": "Zona Sucia",
+      "m2": 15.0
+    },
+    {
+      "codigo": "S02",
+      "nombre": "Almacén Materia Prima",
+      "zona": "Zona Sucia",
+      "m2": 30.0
+    },
+    {
+      "codigo": "S03",
+      "nombre": "Pesado / Selección",
+      "zona": "Zona Sucia",
+      "m2": 2.0
+    },
+    {
+      "codigo": "S04",
+      "nombre": "Limpieza / Lavado (Mermeladas+Snacks)",
+      "zona": "Zona Sucia",
+      "m2": 37.125
+    },
+    {
+      "codigo": "S05",
+      "nombre": "Pelado (Mermeladas+Snacks)",
+      "zona": "Zona Sucia",
+      "m2": 33.5295
+    },
+    {
+      "codigo": "S06",
+      "nombre": "Descarozado (Mermeladas+Snacks)",
+      "zona": "Zona Sucia",
+      "m2": 13.5
+    },
+    {
+      "codigo": "S07",
+      "nombre": "Corte / Pulpeado (Mermeladas+Snacks)",
+      "zona": "Zona Sucia",
+      "m2": 12.69
+    },
+    {
+      "codigo": "S08M",
+      "nombre": "Cocción Mermeladas",
+      "zona": "Zona Limpia",
+      "m2": 4.86
+    },
+    {
+      "codigo": "S08S",
+      "nombre": "Deshidratado Snacks",
+      "zona": "Zona Limpia",
+      "m2": 17.34
+    },
+    {
+      "codigo": "S09M",
+      "nombre": "Envasado / Llenado Mermeladas",
+      "zona": "Zona Limpia",
+      "m2": 10.8
+    },
+    {
+      "codigo": "S09S",
+      "nombre": "Envasado Snacks (VFFS)",
+      "zona": "Zona Limpia",
+      "m2": 4.725
+    },
+    {
+      "codigo": "S10",
+      "nombre": "Pasteurizado",
+      "zona": "Zona Limpia",
+      "m2": 19.2
+    },
+    {
+      "codigo": "S11",
+      "nombre": "Etiquetado / Empaque",
+      "zona": "Zona Limpia",
+      "m2": 8.1
+    },
+    {
+      "codigo": "S12",
+      "nombre": "Almacén Producto Terminado",
+      "zona": "Zona Limpia",
+      "m2": 40.0
+    },
+    {
+      "codigo": "S13",
+      "nombre": "Control de Calidad / Laboratorio",
+      "zona": "Zona Limpia",
+      "m2": 20.7375
+    },
+    {
+      "codigo": "S14",
+      "nombre": "Vestuarios / Barrera Sanitaria",
+      "zona": "Transición BPM",
+      "m2": 12.0
+    },
+    {
+      "codigo": "S15",
+      "nombre": "Oficinas / Administración",
+      "zona": "Administración",
+      "m2": 20.0
+    }
+  ],
+  "carga_distancia": {
+    "C0_A": 508609.1957,
+    "C0_E": 820.0,
+    "C0_TOTAL": 509429.1957,
+    "C1_A": 508609.1957,
+    "C1_E": 660.0,
+    "C1_TOTAL": 509269.1957
+  },
+  "fichas_tecnicas": {
+    "mermeladas": [
+      {
+        "seccion": "Limpieza",
+        "equipo": "Lavadora de Frutas (Mermeladas)",
+        "marca": "Agroshow — Industrial Belt Washer",
+        "ancho": 0.9,
+        "largo": 2.5,
+        "cantidad": 1.0
+      },
+      {
+        "seccion": "Pelado",
+        "equipo": "Peladora Industrial",
+        "marca": "Mazin — Peladora Continua",
+        "ancho": 0.6,
+        "largo": 1.8,
+        "cantidad": 2.0
+      },
+      {
+        "seccion": "Descarozado",
+        "equipo": "Descarozadora de Durazno",
+        "marca": "Gelgoog — Fruit Core Remove Machine",
+        "ancho": 0.5,
+        "largo": 1.2,
+        "cantidad": 2.0
+      },
+      {
+        "seccion": "Pulpeado",
+        "equipo": "Trituradora / Pulpeadora",
+        "marca": "Maritastills — Jolly 60 Reverse",
+        "ancho": 0.7,
+        "largo": 1.5,
+        "cantidad": 2.0
+      },
+      {
+        "seccion": "Cocción",
+        "equipo": "Marmita de Cocción Eléctrica",
+        "marca": "Coolvi — ICOS Professional",
+        "ancho": 0.9,
+        "largo": 1.2,
+        "cantidad": 1.0
+      },
+      {
+        "seccion": "Llenado",
+        "equipo": "Llenadora – Tapadora Automática",
+        "marca": "Cadec",
+        "ancho": 0.8,
+        "largo": 3.0,
+        "cantidad": 1.0
+      },
+      {
+        "seccion": "Etiquetado",
+        "equipo": "Etiquetadora Automática",
+        "marca": "Cadec AC-160-3R",
+        "ancho": 0.5,
+        "largo": 1.8,
+        "cantidad": 2.0
+      },
+      {
+        "seccion": "Pasteurizado",
+        "equipo": "Pasteurizador Túnel",
+        "marca": "Zonesun ZS-PM2",
+        "ancho": 0.8,
+        "largo": 4.0,
+        "cantidad": 2.0
+      }
+    ],
+    "snacks": [
+      {
+        "seccion": "Limpieza",
+        "equipo": "Lavadora de Frutas",
+        "marca": "Agroshow — Industrial Belt Washer",
+        "ancho": 1.0,
+        "largo": 3.0,
+        "cantidad": 2.0
+      },
+      {
+        "seccion": "Pelado",
+        "equipo": "Peladora Industrial de bananas",
+        "marca": "Vice",
+        "ancho": 1.85,
+        "largo": 2.86,
+        "cantidad": 1.0
+      },
+      {
+        "seccion": "Descarozado",
+        "equipo": "Descarozadora (comparte ficha con Mermeladas)",
+        "marca": "Gelgoog",
+        "ancho": 0.5,
+        "largo": 1.2,
+        "cantidad": 3.0
+      },
+      {
+        "seccion": "Cortado",
+        "equipo": "Cortadora de Vegetales Industrial",
+        "marca": "Jegerings",
+        "ancho": 0.6,
+        "largo": 1.2,
+        "cantidad": 1.0
+      },
+      {
+        "seccion": "Deshidratado",
+        "equipo": "Deshidratador Túnel de Microondas al Vacío",
+        "marca": "MVD-100 (≥1.100 kg/h)",
+        "ancho": 0.85,
+        "largo": 6.8,
+        "cantidad": 1.0
+      },
+      {
+        "seccion": "Envasado",
+        "equipo": "Envasadora VFFS (Snack)",
+        "marca": "Weigma MV100 IFT",
+        "ancho": 0.7,
+        "largo": 1.5,
+        "cantidad": 1.0
+      }
+    ],
+    "auxiliares": [
+      {
+        "seccion": "Lavadora de frasco de mermelada",
+        "equipo": "Zonesun ZS-WB16",
+        "marca": "0.85",
+        "ancho": 4.5,
+        "largo": 1.1,
+        "cantidad": 1.0
+      },
+      {
+        "seccion": "Detector de Metales",
+        "equipo": "coso AEC500 (banda c/brazo de rechazo)",
+        "marca": "0.85",
+        "ancho": 1.5,
+        "largo": 0.9,
+        "cantidad": 1.0
+      },
+      {
+        "seccion": "Cámara Frigorífica",
+        "equipo": "Panel 575x575x250 (MercadoLibre)",
+        "marca": "6",
+        "ancho": 6.0,
+        "largo": 2.5,
+        "cantidad": 1.0
+      },
+      {
+        "seccion": "Refractómetro Digital",
+        "equipo": "Refractómetro Digital Brix",
+        "marca": "0.0315",
+        "ancho": 0.125,
+        "largo": 0.046,
+        "cantidad": 2.0
+      },
+      {
+        "seccion": "Medidor de pH",
+        "equipo": "pH-metro digital con sonda",
+        "marca": "0.03",
+        "ancho": 0.15,
+        "largo": 0.02,
+        "cantidad": 2.0
+      },
+      {
+        "seccion": "Higrómetro Digital",
+        "equipo": "Higrómetro digital ambiental",
+        "marca": "—",
+        "ancho": null,
+        "largo": null,
+        "cantidad": 3.0
+      },
+      {
+        "seccion": "Termómetro Digital con Sonda",
+        "equipo": "Termómetro digital sonda inox",
+        "marca": "—",
+        "ancho": null,
+        "largo": null,
+        "cantidad": 3.0
+      },
+      {
+        "seccion": "Cestas Ventiladas para Frutas",
+        "equipo": "Cesta ventilada plástica",
+        "marca": "0.4",
+        "ancho": 0.6,
+        "largo": 0.115,
+        "cantidad": 125.0
+      }
+    ]
+  },
+  "materia_prima": {
+    "mermeladas": [
+      {
+        "etapa": "Entrada (fruta fresca)",
+        "anio1": 254271.2,
+        "anio_mid": 762813.216,
+        "anio_final": 1080652.056
+      },
+      {
+        "etapa": "Selección (sale)",
+        "anio1": 244100.352,
+        "anio_mid": 732300.6874,
+        "anio_final": 1037425.974
+      },
+      {
+        "etapa": "Lavado (sale)",
+        "anio1": 241659.3485,
+        "anio_mid": 724977.6805,
+        "anio_final": 1027051.714
+      },
+      {
+        "etapa": "Pelado (sale)",
+        "anio1": 222326.6006,
+        "anio_mid": 666979.466,
+        "anio_final": 944887.5769
+      },
+      {
+        "etapa": "Descarozado (sale)",
+        "anio1": 200093.9405,
+        "anio_mid": 600281.5194,
+        "anio_final": 850398.8192
+      },
+      {
+        "etapa": "Cocción (sale)",
+        "anio1": 160075.1524,
+        "anio_mid": 480225.2156,
+        "anio_final": 680319.0554
+      },
+      {
+        "etapa": "Envasado/Llenado (kg producto)",
+        "anio1": 157674.0251,
+        "anio_mid": 473021.8373,
+        "anio_final": 670114.2695
+      },
+      {
+        "etapa": "Frascos resultantes (verificación)",
+        "anio1": 525580.0838,
+        "anio_mid": 1576739.458,
+        "anio_final": 2233714.232
+      }
+    ],
+    "snacks": [
+      {
+        "etapa": "Entrada (fruta fresca)",
+        "anio1": 611416.665,
+        "anio_mid": 794841.66,
+        "anio_final": 1650825.0
+      },
+      {
+        "etapa": "Selección (sale)",
+        "anio1": 586959.9984,
+        "anio_mid": 763047.9936,
+        "anio_final": 1584792.0
+      },
+      {
+        "etapa": "Lavado (sale)",
+        "anio1": 581090.3984,
+        "anio_mid": 755417.5137,
+        "anio_final": 1568944.08
+      },
+      {
+        "etapa": "Pelado (sale)",
+        "anio1": 581090.3984,
+        "anio_mid": 755417.5137,
+        "anio_final": 1568944.08
+      },
+      {
+        "etapa": "Descarozado (sale)",
+        "anio1": 522981.3586,
+        "anio_mid": 679875.7623,
+        "anio_final": 1412049.672
+      },
+      {
+        "etapa": "Deshidratado (sale)",
+        "anio1": 36608.6951,
+        "anio_mid": 47591.30336,
+        "anio_final": 98843.47704
+      },
+      {
+        "etapa": "Envasado (kg producto)",
+        "anio1": 36059.56467,
+        "anio_mid": 46877.43381,
+        "anio_final": 97360.82488
+      },
+      {
+        "etapa": "Bolsas resultantes (verificación)",
+        "anio1": 400661.8297,
+        "anio_mid": 520860.3757,
+        "anio_final": 1081786.943
+      }
+    ]
+  }
+}

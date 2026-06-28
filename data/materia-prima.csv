@@ -1,0 +1,73 @@
+MATERIA PRIMA Y MÁQUINAS — vinculado a Plan de Ventas,,,
+,,,
+RECETA — MERMELADAS (por frasco 300 g),,,
+Insumo,Cantidad,Unidad,
+Fruta,0.4,kg,
+Stevia,0.002,kg,
+Pectina,0.005,kg,
+Sorbato de potasio,0.045,kg,
+,,,
+MERMAS POR ETAPA — MERMELADAS,,,
+Etapa,% Merma,,
+Selección,0.04,,
+Lavado,0.01,,
+Pelado,0.08,,
+Descarozado,0.1,,
+Cocción (evaporación),0.2,,
+Envasado,0.015,,
+,,,
+BALANCE DE MATERIA PRIMA — MERMELADAS (kg fruta por año),,,
+Etapa,Año 1,Año 5,Año 10
+Entrada (fruta fresca),254271.2,762813.216,1080652.056
+Selección (sale),244100.352,732300.6874,1037425.974
+Lavado (sale),241659.3485,724977.6805,1027051.714
+Pelado (sale),222326.6006,666979.466,944887.5769
+Descarozado (sale),200093.9405,600281.5194,850398.8192
+Cocción (sale),160075.1524,480225.2156,680319.0554
+Envasado/Llenado (kg producto),157674.0251,473021.8373,670114.2695
+Frascos resultantes (verificación),525580.0838,1576739.458,2233714.232
+,,,
+Desglose de fruta de entrada por variedad (kg/año),,,
+Fruta,Año 1,Año 5,Año 10
+Durazno,114422.04,343265.9472,486293.4252
+Frutilla,58482.376,175447.0397,248549.9729
+Ciruela,58482.376,175447.0397,248549.9729
+Higo,12713.56,38140.6608,54032.6028
+Membrillo,10170.848,30512.52864,43226.08224
+,,,
+============ LÍNEA SNACKS ============,,,
+,,,
+RECETA — SNACKS (por bolsa 90 g),,,
+Insumo,Cantidad,Unidad,
+Fruta fresca,1.5,kg,
+Envase doypack,1,un,
+,,,
+MERMAS POR ETAPA — SNACKS,,,
+Etapa,% Merma,,
+Selección,0.04,,
+Lavado,0.01,,
+"Pelado (blend, según fruta)",0,,
+"Descarozado (blend, según fruta)",0.1,,
+Deshidratado,0.93,,
+Envasado,0.015,,
+"NOTA: Deshidratado recalculado a 93% (antes 70% en archivo viejo) para cerrar 1,5 kg fruta -> 90 g producto (ratio 16,7:1 confirmado por el equipo). Pérdida de masa ~90% es físicamente razonable (humedad fresca ~80-90% -> humedad final ~10-15%). OJO: esto deja inconsistente la tabla ""Rendimiento seco"" de la Ficha Técnica de Producto (15-40%) — revisar aparte.",,,
+,,,
+BALANCE DE MATERIA PRIMA — SNACKS (kg fruta por año),,,
+Etapa,Año 1,Año 4,Año 8
+Entrada (fruta fresca),611416.665,794841.66,1650825
+Selección (sale),586959.9984,763047.9936,1584792
+Lavado (sale),581090.3984,755417.5137,1568944.08
+Pelado (sale),581090.3984,755417.5137,1568944.08
+Descarozado (sale),522981.3586,679875.7623,1412049.672
+Deshidratado (sale),36608.6951,47591.30336,98843.47704
+Envasado (kg producto),36059.56467,46877.43381,97360.82488
+Bolsas resultantes (verificación),400661.8297,520860.3757,1081786.943
+,,,
+Desglose de fruta de entrada por variedad (kg/año),,,
+Fruta,Año 1,Año 4,Año 8
+Banana,244566.666,317936.664,660330
+Pasas de uva,213995.8328,278194.581,577788.75
+Manzana,61141.6665,79484.166,165082.5
+Durazno,61141.6665,79484.166,165082.5
+Ciruela,24456.6666,31793.6664,66033
+Kiwi,6114.16665,7948.4166,16508.25

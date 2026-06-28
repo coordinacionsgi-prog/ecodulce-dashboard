@@ -1,0 +1,89 @@
+CAP — CUADRO DE ANÁLISIS DEL PROCESO (vinculado a Plan de Ventas y Materia Prima y Maquinas),,,,,,,
+,,,,,,,
+RÉGIMEN DE TRABAJO (1 turno = 239 días x 8 h = 1.912 h activas/año),,,,,,,
+Horizonte,Turnos,Horas activas/año,,,,,
+Año 1,1,1912,,,,,
+Año 4,1,1912,,,,,
+Año 5,2,3824,,,,,
+Año 8,2,3824,,,,,
+Año 10,3,5736,,,,,
+,,,,,,,
+CONSTANTES DE MÁQUINAS — MERMELADAS,,,,,,,
+Sección,Cap. Teórica,Unidad,Rendimiento,Fuente,,,
+Limpieza,400,kg/h,0.8,Lavadora de Frutas (Mermeladas) — ficha nueva,,,
+Pelado,220,kg/h,0.8,Peladora Industrial (Mazin),,,
+Descarozado,200,kg/h,0.8,Descarozadora (Gelgoog),,,
+Pulpeado,180,kg/h,0.8,Trituradora-Pulpeadora (Maritastills),,,
+Cocción,200,kg/h,0.8,Marmita de Cocción Eléctrica (Coolvi),,,
+Llenado,666.67,frascos/h,0.8,"Llenadora-Tapadora (Cadec) — 200kg/h / 0,3kg por frasco",,,
+Etiquetado,350,unid/h,0.8,Etiquetadora AC-160-3R (Cadec),,,
+Pasteurizado,400,unid/h,0.8,Pasteurizador Túnel (Zonesun),,,
+,,,,,,,
+CONSTANTES DE MÁQUINAS — SNACKS,,,,,,,
+Sección,Cap. Teórica,Unidad,Rendimiento,Fuente,,,
+Limpieza,280,kg/h,0.8,Lavadora de Frutas (Agroshow),,,
+Pelado,600,kg/h,0.8,Peladora de bananas (Vice),,,
+Descarozado,200,kg/h,0.8,Descarozadora (comparte con Mermeladas),,,
+Cortado,600,kg/h,0.8,Cortadora de Vegetales (Jegerings),,,
+Deshidratado,1000,kg/h por módulo,0.85,Túnel Microondas MVD-100,,,
+Envasado,1000,bolsas/h,0.8,Envasadora VFFS (Weigma),,,
+,,,,,,,
+"============ CAP — LÍNEA MERMELADAS — AÑO 1 (1 turno, 1.912 h) ============",,,,,,,
+Sección,Unidad,Requerido,Cap. Real/máquina,Máquinas necesarias,Redondeo,Cap. Total,Aprovechamiento
+Limpieza,kg,244100.352,611840,0.3989610879,1,611840,0.3989610879
+Pelado,kg,241659.3485,336512,0.7181299582,1,336512,0.7181299582
+Descarozado,kg,222326.6006,305920,0.7267475177,1,305920,0.7267475177
+Pulpeado,kg,200093.9405,275328,0.7267475177,1,275328,0.7267475177
+Cocción,kg,200093.9405,305920,0.6540727659,1,305920,0.6540727659
+Llenado,frascos,635678,1019738.432,0.6233735829,1,1019738.432,0.6233735829
+Etiquetado,frascos,635678,535360,1.18738419,2,1070720,0.593692095
+Pasteurizado,frascos,635678,611840,1.038961166,2,1223680,0.5194805832
+,,,,,,,
+"============ CAP — LÍNEA MERMELADAS — AÑO 5 (2 turnos, 3.824 h) ============",,,,,,,
+Sección,Unidad,Requerido,Cap. Real/máquina,Máquinas necesarias,Redondeo,Cap. Total,Aprovechamiento
+Limpieza,kg,732300.6874,1223680,0.5984413305,1,1223680,0.5984413305
+Pelado,kg,724977.6805,673024,1.077194395,2,1346048,0.5385971975
+Descarozado,kg,666979.466,611840,1.090120728,2,1223680,0.5450603639
+Pulpeado,kg,600281.5194,550656,1.090120728,2,1101312,0.5450603639
+Cocción,kg,600281.5194,611840,0.9811086549,1,611840,0.9811086549
+Llenado,frascos,1907033.04,2039476.864,0.9350599037,1,2039476.864,0.9350599037
+Etiquetado,frascos,1907033.04,1070720,1.781075389,2,2141440,0.8905376943
+Pasteurizado,frascos,1907033.04,1223680,1.558440965,2,2447360,0.7792204825
+,,,,,,,
+"============ CAP — LÍNEA MERMELADAS — AÑO 10 (3 turnos, 5.736 h) ============",,,,,,,
+Sección,Unidad,Requerido,Cap. Real/máquina,Máquinas necesarias,Redondeo,Cap. Total,Aprovechamiento
+Limpieza,kg,1037425.974,1835520,0.56519459,1,1835520,0.56519459
+Pelado,kg,1027051.714,1009536,1.017350262,2,2019072,0.508675131
+Descarozado,kg,944887.5769,917760,1.029558465,2,1835520,0.5147792325
+Pulpeado,kg,850398.8192,825984,1.029558465,2,1651968,0.5147792325
+Cocción,kg,850398.8192,917760,0.9266026186,1,917760,0.9266026186
+Llenado,frascos,2701630.14,3059215.296,0.8831121312,1,3059215.296,0.8831121312
+Etiquetado,frascos,2701630.14,1606080,1.682126756,2,3212160,0.8410633779
+Pasteurizado,frascos,2701630.14,1835520,1.471860911,2,3671040,0.7359304557
+,,,,,,,
+"============ CAP — LÍNEA SNACKS — AÑO 1 (1 turno, 1.912 h) ============",,,,,,,
+Sección,Unidad,Requerido,Cap. Real/máquina,Máquinas necesarias,Redondeo,Cap. Total,Aprovechamiento
+Limpieza,kg,586959.9984,428288,1.370479673,2,856576,0.6852398367
+Pelado,kg,581090.3984,917760,0.6331616092,1,917760,0.6331616092
+Descarozado,kg,581090.3984,305920,1.899484827,2,611840,0.9497424137
+Cortado,kg,522981.3586,917760,0.5698454482,1,917760,0.5698454482
+Deshidratado,kg,522981.3586,1625200,0.3217950767,1,1625200,0.3217950767
+Envasado,bolsas,407611.11,1529600,0.2664821587,1,1529600,0.2664821587
+,,,,,,,
+"============ CAP — LÍNEA SNACKS — AÑO 4 (1 turno, 1.912 h) ============",,,,,,,
+Sección,Unidad,Requerido,Cap. Real/máquina,Máquinas necesarias,Redondeo,Cap. Total,Aprovechamiento
+Limpieza,kg,763047.9936,428288,1.781623565,2,856576,0.8908117827
+Pelado,kg,755417.5137,917760,0.8231100872,1,917760,0.8231100872
+Descarozado,kg,755417.5137,305920,2.469330262,3,917760,0.8231100872
+Cortado,kg,679875.7623,917760,0.7407990785,1,917760,0.7407990785
+Deshidratado,kg,679875.7623,1625200,0.4183335973,1,1625200,0.4183335973
+Envasado,bolsas,529894.44,1529600,0.3464268044,1,1529600,0.3464268044
+,,,,,,,
+"============ CAP — LÍNEA SNACKS — AÑO 8 (2 turnos, 3.824 h) ============",,,,,,,
+Sección,Unidad,Requerido,Cap. Real/máquina,Máquinas necesarias,Redondeo,Cap. Total,Aprovechamiento
+Limpieza,kg,1584792,856576,1.850147564,2,1713152,0.9250737821
+Pelado,kg,1568944.08,1835520,0.8547681747,1,1835520,0.8547681747
+Descarozado,kg,1568944.08,611840,2.564304524,3,1835520,0.8547681747
+Cortado,kg,1412049.672,1835520,0.7692913572,1,1835520,0.7692913572
+Deshidratado,kg,1412049.672,3250400,0.4344233547,1,3250400,0.4344233547
+Envasado,bolsas,1100550,3059200,0.3597509153,1,3059200,0.3597509153

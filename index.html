@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eco Dulce — Factibilidad Técnica</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+<style>
+  :root{
+    --bg:#0f1419; --panel:#171d26; --panel2:#1d2530; --border:#2a3441;
+    --text:#e8edf2; --muted:#8b98a8; --accent:#4fd1a5; --accent2:#5b9bd5;
+    --warn:#e8a93e; --danger:#e85d5d; --merm:#e8a93e; --snack:#5b9bd5;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);}
+  header{padding:32px 24px 16px;text-align:center;border-bottom:1px solid var(--border);}
+  header h1{margin:0;font-size:1.8rem;font-weight:700;letter-spacing:.5px;}
+  header p{color:var(--muted);margin:8px 0 0;font-size:.95rem;}
+  .badge{display:inline-block;background:var(--panel2);border:1px solid var(--border);border-radius:20px;padding:4px 14px;font-size:.78rem;color:var(--accent);margin-top:10px;}
+  nav{display:flex;justify-content:center;gap:6px;flex-wrap:wrap;padding:16px;border-bottom:1px solid var(--border);position:sticky;top:0;background:var(--bg);z-index:10;}
+  nav button{background:none;border:1px solid var(--border);color:var(--muted);padding:8px 16px;border-radius:8px;cursor:pointer;font-size:.85rem;transition:.15s;}
+  nav button.active,nav button:hover{background:var(--accent);color:#0f1419;border-color:var(--accent);}
+  main{max-width:1200px;margin:0 auto;padding:24px;}
+  section{display:none;}
+  section.active{display:block;animation:fade .3s;}
+  @keyframes fade{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:translateY(0);}}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-bottom:24px;}
+  .card{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:20px;}
+  .card h3{margin:0 0 4px;font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;font-weight:600;}
+  .card .big{font-size:1.9rem;font-weight:700;color:var(--accent);}
+  .card .sub{color:var(--muted);font-size:.8rem;margin-top:4px;}
+  .panel{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:20px;margin-bottom:20px;}
+  .panel h2{margin:0 0 16px;font-size:1.1rem;}
+  .chart-wrap{position:relative;height:340px;}
+  table{width:100%;border-collapse:collapse;font-size:.85rem;}
+  th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--border);}
+  th{color:var(--muted);font-weight:600;font-size:.75rem;text-transform:uppercase;}
+  tr:hover td{background:var(--panel2);}
+  .pill{display:inline-block;padding:2px 10px;border-radius:12px;font-size:.75rem;font-weight:600;}
+  .pill.ok{background:rgba(79,209,165,.15);color:var(--accent);}
+  .pill.warn{background:rgba(232,169,62,.15);color:var(--warn);}
+  .pill.danger{background:rgba(232,93,93,.15);color:var(--danger);}
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+  @media(max-width:760px){.two-col{grid-template-columns:1fr;}}
+  footer{text-align:center;color:var(--muted);font-size:.78rem;padding:30px;border-top:1px solid var(--border);margin-top:20px;}
+  .tag-merm{color:var(--merm);} .tag-snack{color:var(--snack);}
+  .note{font-size:.8rem;color:var(--muted);background:var(--panel2);border-left:3px solid var(--accent2);padding:10px 14px;border-radius:0 8px 8px 0;margin-top:10px;}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🍑 Eco Dulce — Factibilidad Técnica</h1>
+  <p>Mermeladas y Snacks de Fruta sin Azúcar — UTN FRBA · I5052 · Grupo 07</p>
+  <span class="badge" id="updated-badge">cargando…</span>
+</header>
+
+<nav id="nav">
+  <button data-tab="resumen" class="active">Resumen</button>
+  <button data-tab="ventas">Plan de Ventas</button>
+  <button data-tab="materia">Materia Prima</button>
+  <button data-tab="cap">CAP</button>
+  <button data-tab="maquinas">Máquinas</button>
+  <button data-tab="layout">Layout</button>
+</nav>
+
+<main>
+
+<section id="resumen" class="active">
+  <div class="grid" id="kpi-grid"></div>
+  <div class="two-col">
+    <div class="panel">
+      <h2>Ventas proyectadas a 10 años (unidades)</h2>
+      <div class="chart-wrap"><canvas id="chart-resumen-ventas"></canvas></div>
+    </div>
+    <div class="panel">
+      <h2>Superficie productiva neta (Guerchet)</h2>
+      <div class="chart-wrap"><canvas id="chart-resumen-guerchet"></canvas></div>
+    </div>
+  </div>
+  <div class="panel">
+    <h2>Cadena de trazabilidad</h2>
+    <p style="color:var(--muted);line-height:1.7">
+      Plan de Ventas → Materia Prima y Máquinas → CAP → Fichas Técnicas → Guerchet → REL → Carga-Distancia.
+      Todo vinculado por fórmula en el Sheet maestro: cambiar el Plan de Ventas recalcula automáticamente
+      mermas, capacidades de máquina, superficies y el índice de carga-distancia del layout.
+    </p>
+  </div>
+</section>
+
+<section id="ventas">
+  <div class="two-col">
+    <div class="panel">
+      <h2 class="tag-merm">🫙 Mermeladas — Unidades (frascos/año)</h2>
+      <div class="chart-wrap"><canvas id="chart-ventas-merm"></canvas></div>
+    </div>
+    <div class="panel">
+      <h2 class="tag-snack">🍌 Snacks — Unidades (bolsas/año)</h2>
+      <div class="chart-wrap"><canvas id="chart-ventas-snack"></canvas></div>
+    </div>
+  </div>
+  <div class="panel">
+    <h2>Participación de mercado proyectada</h2>
+    <div class="chart-wrap"><canvas id="chart-ventas-market"></canvas></div>
+    <div class="note">Salto en Año 5: ingreso a cadenas de supermercados (validado con Marcelo en reunión de seguimiento).</div>
+  </div>
+</section>
+
+<section id="materia">
+  <div class="two-col">
+    <div class="panel">
+      <h2 class="tag-merm">Cascada de mermas — Mermeladas (kg fruta/año)</h2>
+      <div class="chart-wrap"><canvas id="chart-mp-merm"></canvas></div>
+    </div>
+    <div class="panel">
+      <h2 class="tag-snack">Cascada de mermas — Snacks (kg fruta/año)</h2>
+      <div class="chart-wrap"><canvas id="chart-mp-snack"></canvas></div>
+    </div>
+  </div>
+  <div class="note">Snacks: merma de Deshidratado recalculada a 93% (antes 70% en el archivo original) para cerrar matemáticamente 1,5 kg fruta fresca → 90 g producto final (ratio 16,7:1 confirmado por el equipo).</div>
+</section>
+
+<section id="cap">
+  <div class="panel">
+    <h2>Aprovechamiento de capacidad por sección y horizonte</h2>
+    <div class="chart-wrap" style="height:420px"><canvas id="chart-cap"></canvas></div>
+  </div>
+  <div class="panel">
+    <h2>Detalle CAP</h2>
+    <div id="cap-tables"></div>
+  </div>
+</section>
+
+<section id="maquinas">
+  <div class="panel">
+    <h2 class="tag-merm">Línea Mermeladas — Año 10</h2>
+    <table id="tabla-fichas-merm"></table>
+  </div>
+  <div class="panel">
+    <h2 class="tag-snack">Línea Snacks — Año 8</h2>
+    <table id="tabla-fichas-snack"></table>
+  </div>
+</section>
+
+<section id="layout">
+  <div class="grid">
+    <div class="card"><h3>Superficie Mermeladas</h3><div class="big tag-merm" id="g-merm">—</div></div>
+    <div class="card"><h3>Superficie Snacks</h3><div class="big tag-snack" id="g-snack">—</div></div>
+    <div class="card"><h3>Superficie Auxiliares</h3><div class="big">—</div></div>
+    <div class="card"><h3>C0 → C1 (Carga-Distancia)</h3><div class="big" id="g-cd">—</div></div>
+  </div>
+  <div class="two-col">
+    <div class="panel">
+      <h2>Distribución de superficie por sector (Guerchet)</h2>
+      <div class="chart-wrap"><canvas id="chart-guerchet"></canvas></div>
+    </div>
+    <div class="panel">
+      <h2>17 sectores — REL (m² por sector)</h2>
+      <div class="chart-wrap"><canvas id="chart-rel"></canvas></div>
+    </div>
+  </div>
+  <div class="panel">
+    <h2>CRAFT — Layout 0 vs Layout 1</h2>
+    <div class="chart-wrap" style="height:200px"><canvas id="chart-craft"></canvas></div>
+    <div class="note">Layout 1: reubicación de S13 (CC/Laboratorio) al centro de la barrera sanitaria. La cadena principal de proceso (S01→S12) ya estaba en el óptimo para esta topología — no admite más mejoras de CRAFT.</div>
+  </div>
+</section>
+
+</main>
+
+<footer>Eco Dulce S.A. — Proyecto Final I5052, UTN FRBA · Generado a partir del Google Sheet maestro vinculado</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
