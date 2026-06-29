@@ -163,6 +163,7 @@ def parse_fichas(rows):
                     "alto": to_float(r[4]) if len(r) > 4 else None,
                     "cantidad": to_float(r[5]) if len(r) > 5 else None,
                     "fuente": r[6] if len(r) > 6 else "",
+                    "foto": r[7] if len(r) > 7 else "",
                 })
             else:
                 out[section].append({
@@ -180,6 +181,7 @@ def parse_fichas(rows):
                     "cantidad": to_float(r[11]) if len(r) > 11 else None,
                     "precio": r[12] if len(r) > 12 else "",
                     "fuente": r[13] if len(r) > 13 else "",
+                    "foto": r[14] if len(r) > 14 else "",
                 })
     return out
 

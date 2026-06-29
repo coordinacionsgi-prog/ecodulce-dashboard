@@ -164,8 +164,13 @@ function buildCAP() {
   document.getElementById('cap-tables').innerHTML = tables;
 }
 
+function fichaImg(m) {
+  if (!m.foto) return '';
+  return `<img src="${m.foto}" alt="${m.equipo || ''}" loading="lazy" onerror="this.style.display='none'">`;
+}
 function maquinaCard(m) {
   return `<div class="ficha">
+    ${fichaImg(m)}
     <h4>${m.seccion} — ${m.equipo}</h4>
     <dl>
       <dt>Marca/Modelo</dt><dd>${m.marca || '—'}</dd>
@@ -182,6 +187,7 @@ function maquinaCard(m) {
 }
 function auxCard(m) {
   return `<div class="ficha">
+    ${fichaImg(m)}
     <h4>${m.equipo}</h4>
     <dl>
       <dt>Dimensiones</dt><dd>${fmt(m.ancho,2)} × ${fmt(m.largo,2)} × ${fmt(m.alto,2)} m</dd>

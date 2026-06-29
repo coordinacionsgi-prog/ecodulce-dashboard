@@ -678,7 +678,8 @@
         "rendimiento": 0.8,
         "cantidad": 1.0,
         "precio": "USD 10.000 (aprox.)",
-        "fuente": "Ficha creada — gap cubierto, ver pestaña en Drive"
+        "fuente": "Ficha creada — gap cubierto, ver pestaña en Drive",
+        "foto": ""
       },
       {
         "seccion": "Pelado",
@@ -694,7 +695,8 @@
         "rendimiento": 0.8,
         "cantidad": 2.0,
         "precio": "A confirmar con proveedor",
-        "fuente": "mazinindustrial.com.ar"
+        "fuente": "mazinindustrial.com.ar",
+        "foto": ""
       },
       {
         "seccion": "Descarozado",
@@ -710,23 +712,25 @@
         "rendimiento": 0.8,
         "cantidad": 2.0,
         "precio": "USD 3.000–5.000 (aprox.)",
-        "fuente": "gelgoogmachinery.com"
+        "fuente": "gelgoogmachinery.com",
+        "foto": ""
       },
       {
         "seccion": "Pulpeado",
         "equipo": "Trituradora / Pulpeadora",
-        "marca": "Maritastills — Jolly 60 Reverse",
-        "ancho": 0.7,
-        "largo": 1.5,
-        "alto": 1.0,
-        "peso": "~200 kg",
-        "potencia": "3 kW",
-        "cap_teorica": "180",
+        "marca": "Casa de la Licuadora Industrial — Despul-2hp-300kh",
+        "ancho": 1.3,
+        "largo": 1.46,
+        "alto": 0.88,
+        "peso": "No especificado",
+        "potencia": "2 HP (1,5 kW)",
+        "cap_teorica": "300",
         "unidad": "kg/h",
         "rendimiento": 0.8,
         "cantidad": 2.0,
-        "precio": "USD 6.000–9.000 (aprox.)",
-        "fuente": "maritastills.es"
+        "precio": "COP 4.600.000 ≈ USD 1.336",
+        "fuente": "casadelalicuadoraindustrial.com",
+        "foto": "img/maquinas/despulpadora-2hp.png"
       },
       {
         "seccion": "Cocción",
@@ -742,7 +746,8 @@
         "rendimiento": 0.8,
         "cantidad": 1.0,
         "precio": "USD 10.000–15.000 (aprox.)",
-        "fuente": "coolvi.es"
+        "fuente": "coolvi.es",
+        "foto": ""
       },
       {
         "seccion": "Llenado",
@@ -758,7 +763,8 @@
         "rendimiento": 0.8,
         "cantidad": 1.0,
         "precio": "A confirmar con proveedor",
-        "fuente": "cadec.com.ar"
+        "fuente": "cadec.com.ar",
+        "foto": ""
       },
       {
         "seccion": "Etiquetado",
@@ -774,7 +780,8 @@
         "rendimiento": 0.8,
         "cantidad": 2.0,
         "precio": "A confirmar con proveedor",
-        "fuente": "cadec.com.ar"
+        "fuente": "cadec.com.ar",
+        "foto": ""
       },
       {
         "seccion": "Pasteurizado",
@@ -790,7 +797,8 @@
         "rendimiento": 0.8,
         "cantidad": 2.0,
         "precio": "USD 8.000–14.000 (aprox.)",
-        "fuente": "zonesun.com"
+        "fuente": "zonesun.com",
+        "foto": ""
       }
     ],
     "snacks": [
@@ -808,7 +816,8 @@
         "rendimiento": 0.8,
         "cantidad": 2.0,
         "precio": "USD 15.000 (aprox.)",
-        "fuente": "agroshow.info"
+        "fuente": "agroshow.info",
+        "foto": ""
       },
       {
         "seccion": "Pelado",
@@ -824,7 +833,8 @@
         "rendimiento": 0.8,
         "cantidad": 1.0,
         "precio": "A confirmar con proveedor",
-        "fuente": "vicmachine.com"
+        "fuente": "vicmachine.com",
+        "foto": ""
       },
       {
         "seccion": "Descarozado",
@@ -840,7 +850,8 @@
         "rendimiento": 0.8,
         "cantidad": 3.0,
         "precio": "USD 3.000–5.000 (aprox.)",
-        "fuente": "gelgoogmachinery.com"
+        "fuente": "gelgoogmachinery.com",
+        "foto": ""
       },
       {
         "seccion": "Cortado",
@@ -856,7 +867,8 @@
         "rendimiento": 0.8,
         "cantidad": 1.0,
         "precio": "USD 5.000–8.000 (aprox.)",
-        "fuente": "jegerings.com"
+        "fuente": "jegerings.com",
+        "foto": ""
       },
       {
         "seccion": "Deshidratado",
@@ -872,7 +884,8 @@
         "rendimiento": 0.85,
         "cantidad": 1.0,
         "precio": "USD 80.000–120.000 (por módulo)",
-        "fuente": "Alibaba / importación directa"
+        "fuente": "Alibaba / importación directa",
+        "foto": ""
       },
       {
         "seccion": "Envasado",
@@ -888,7 +901,8 @@
         "rendimiento": 0.8,
         "cantidad": 1.0,
         "precio": "USD 12.000–18.000 (aprox.)",
-        "fuente": "weigmastore.com"
+        "fuente": "weigmastore.com",
+        "foto": ""
       }
     ],
     "auxiliares": [
@@ -899,7 +913,8 @@
         "largo": 4.5,
         "alto": 1.1,
         "cantidad": 1.0,
-        "fuente": "zonesunpack.com"
+        "fuente": "zonesunpack.com",
+        "foto": ""
       },
       {
         "seccion": "Detector de Metales",
@@ -908,7 +923,8 @@
         "largo": 1.5,
         "alto": 0.9,
         "cantidad": 1.0,
-        "fuente": "egecol.com"
+        "fuente": "egecol.com",
+        "foto": ""
       },
       {
         "seccion": "Cámara Frigorífica",
@@ -917,7 +933,8 @@
         "largo": 6.0,
         "alto": 2.5,
         "cantidad": 1.0,
-        "fuente": "MercadoLibre MLA-1676401300"
+        "fuente": "MercadoLibre MLA-1676401300",
+        "foto": ""
       },
       {
         "seccion": "Refractómetro Digital",
@@ -926,7 +943,8 @@
         "largo": 0.125,
         "alto": 0.046,
         "cantidad": 2.0,
-        "fuente": "—"
+        "fuente": "—",
+        "foto": ""
       },
       {
         "seccion": "Medidor de pH",
@@ -935,7 +953,8 @@
         "largo": 0.15,
         "alto": 0.02,
         "cantidad": 2.0,
-        "fuente": "—"
+        "fuente": "—",
+        "foto": ""
       },
       {
         "seccion": "Higrómetro Digital",
@@ -944,7 +963,8 @@
         "largo": null,
         "alto": null,
         "cantidad": 3.0,
-        "fuente": "—"
+        "fuente": "—",
+        "foto": ""
       },
       {
         "seccion": "Termómetro Digital con Sonda",
@@ -953,7 +973,8 @@
         "largo": null,
         "alto": null,
         "cantidad": 3.0,
-        "fuente": "—"
+        "fuente": "—",
+        "foto": ""
       },
       {
         "seccion": "Cestas Ventiladas para Frutas",
@@ -962,7 +983,8 @@
         "largo": 0.6,
         "alto": 0.115,
         "cantidad": 125.0,
-        "fuente": "Proveedor local"
+        "fuente": "Proveedor local",
+        "foto": ""
       }
     ]
   },
