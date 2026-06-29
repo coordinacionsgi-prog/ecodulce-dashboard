@@ -17,18 +17,18 @@ S03,Pesado / Selección,Zona Sucia,2,"Estimado (balanza industrial, sin ficha de
 S04,Limpieza / Lavado (Mermeladas+Snacks),Zona Sucia,37.125,Guerchet
 S05,Pelado (Mermeladas+Snacks),Zona Sucia,33.5295,Guerchet
 S06,Descarozado (Mermeladas+Snacks),Zona Sucia,13.5,Guerchet
-S07,Corte / Pulpeado (Mermeladas+Snacks),Zona Sucia,12.69,Guerchet
+S07,Corte / Pulpeado (Mermeladas+Snacks),Zona Sucia,20.322000000000003,Guerchet
 S08M,Cocción Mermeladas,Zona Limpia,4.86,Guerchet
-S08S,Deshidratado Snacks,Zona Limpia,17.34,Guerchet
+S08S,Deshidratado Snacks,Zona Limpia,17.339999999999996,Guerchet
 S09M,Envasado / Llenado Mermeladas,Zona Limpia,10.8,Guerchet
 S09S,Envasado Snacks (VFFS),Zona Limpia,4.725,Guerchet
-S10,Pasteurizado,Zona Limpia,19.2,Guerchet
-S11,Etiquetado / Empaque,Zona Limpia,8.1,Guerchet
+S10,Pasteurizado,Zona Limpia,19.200000000000003,Guerchet
+S11,Etiquetado / Empaque,Zona Limpia,8.100000000000001,Guerchet
 S12,Almacén Producto Terminado,Zona Limpia,40,Estimado (a ajustar con dimensionamiento de stock)
 S13,Control de Calidad / Laboratorio,Zona Limpia,20.7375,Estimado base 15 m² + Detector de Metales (Guerchet)
 S14,Vestuarios / Barrera Sanitaria,Transición BPM,12,Estimado
 S15,Oficinas / Administración,Administración,20,Estimado
-TOTAL SUPERFICIE SECTORES,148.7045,,,
+TOTAL SUPERFICIE SECTORES,156.3365,,,
 ,,,,
 RELACIONES A (Imprescindible) — flujo secuencial de materiales,,,,
 Sector A,Sector B,Justificación,,
