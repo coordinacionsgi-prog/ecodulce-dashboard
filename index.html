@@ -20,6 +20,12 @@
   nav{display:flex;justify-content:center;gap:6px;flex-wrap:wrap;padding:16px;border-bottom:1px solid var(--border);position:sticky;top:0;background:var(--bg);z-index:10;}
   nav button{background:none;border:1px solid var(--border);color:var(--muted);padding:8px 16px;border-radius:8px;cursor:pointer;font-size:.85rem;transition:.15s;}
   nav button.active,nav button:hover{background:var(--accent);color:#0f1419;border-color:var(--accent);}
+  #nav-groups{padding-bottom:10px;}
+  #nav-groups button{font-weight:600;}
+  #nav-sub{padding-top:0;padding-bottom:12px;border-bottom:1px solid var(--border);}
+  #nav-sub:empty{display:none;border-bottom:none;padding:0;}
+  #nav-sub button{font-size:.78rem;padding:6px 14px;border-style:dashed;}
+  #nav-sub button.active,#nav-sub button:hover{border-style:solid;}
   main{max-width:1200px;margin:0 auto;padding:24px;}
   section{display:none;}
   section.active{display:block;animation:fade .3s;}
@@ -61,16 +67,13 @@
   <span class="badge" id="updated-badge">cargando…</span>
 </header>
 
-<nav id="nav">
-  <button data-tab="resumen" class="active">Resumen</button>
-  <button data-tab="ventas">Plan de Ventas</button>
-  <button data-tab="materia">Materia Prima</button>
-  <button data-tab="fichasmp">Fichas MP</button>
-  <button data-tab="cap">CAP</button>
-  <button data-tab="maquinas">Máquinas</button>
-  <button data-tab="fichasprod">Fichas Producto</button>
-  <button data-tab="layout">Layout</button>
+<nav id="nav-groups">
+  <button data-group="resumen" class="active">Resumen</button>
+  <button data-group="prefactibilidad">Prefactibilidad</button>
+  <button data-group="comercial">Factibilidad Comercial</button>
+  <button data-group="tecnica">Factibilidad Técnica</button>
 </nav>
+<nav id="nav-sub"></nav>
 
 <main>
 
@@ -106,6 +109,27 @@
       Plan de Ventas → Materia Prima y Máquinas → CAP → Fichas Técnicas → Guerchet → REL → Carga-Distancia.
       Todo vinculado por fórmula en el Sheet maestro: cambiar el Plan de Ventas recalcula automáticamente
       mermas, capacidades de máquina, superficies y el índice de carga-distancia del layout.
+    </p>
+  </div>
+</section>
+
+<section id="prefactibilidad">
+  <div class="panel">
+    <h2>📋 Prefactibilidad</h2>
+    <p style="color:var(--muted);line-height:1.7">
+      Eco Dulce es un emprendimiento dedicado a mermeladas frutales artesanales y snacks de fruta deshidratada,
+      ambos sin azúcar agregada (endulzados con stevia), apuntando al segmento de consumidores que priorizan una
+      alimentación saludable, funcional y sustentable.
+    </p>
+    <div class="note">
+      Esta sección está en construcción: próximamente se van a agregar las tablas de definición del proyecto,
+      alcance, análisis de riesgos y cronograma preliminar, con el mismo formato de tabla que el resto del informe.
+    </div>
+  </div>
+  <div class="panel">
+    <h2>📄 Documento completo</h2>
+    <p style="color:var(--muted);font-size:.85rem;margin:0">
+      Disponible en Drive: Prefactibilidad - Mermeladas (Eco Dulce) - Grupo07 - I5052.
     </p>
   </div>
 </section>

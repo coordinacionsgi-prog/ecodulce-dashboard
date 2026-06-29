@@ -27,17 +27,59 @@ async function init() {
   setupNav();
 }
 
-function setupNav() {
-  const buttons = document.querySelectorAll('nav button');
-  buttons.forEach(btn => {
+const NAV_GROUPS = {
+  resumen: { label: 'Resumen', tabs: [{ id: 'resumen', label: 'Resumen' }] },
+  prefactibilidad: { label: 'Prefactibilidad', tabs: [{ id: 'prefactibilidad', label: 'Prefactibilidad' }] },
+  comercial: { label: 'Factibilidad Comercial', tabs: [{ id: 'ventas', label: 'Plan de Ventas' }] },
+  tecnica: {
+    label: 'Factibilidad Técnica',
+    tabs: [
+      { id: 'materia', label: 'Materia Prima' },
+      { id: 'fichasmp', label: 'Fichas MP' },
+      { id: 'cap', label: 'CAP' },
+      { id: 'maquinas', label: 'Máquinas' },
+      { id: 'fichasprod', label: 'Fichas Producto' },
+      { id: 'layout', label: 'Layout' },
+    ],
+  },
+};
+
+function showTab(tabId) {
+  document.querySelectorAll('main section').forEach(s => s.classList.remove('active'));
+  document.getElementById(tabId).classList.add('active');
+  const doResize = () => Object.values(Chart.instances).forEach(c => c.resize());
+  requestAnimationFrame(doResize);
+  setTimeout(doResize, 60);
+}
+
+function renderSubNav(groupKey) {
+  const sub = document.getElementById('nav-sub');
+  const group = NAV_GROUPS[groupKey];
+  if (group.tabs.length <= 1) {
+    sub.innerHTML = '';
+    showTab(group.tabs[0].id);
+    return;
+  }
+  sub.innerHTML = group.tabs
+    .map((t, i) => `<button data-tab="${t.id}" class="${i === 0 ? 'active' : ''}">${t.label}</button>`)
+    .join('');
+  sub.querySelectorAll('button').forEach(btn => {
     btn.addEventListener('click', () => {
-      buttons.forEach(b => b.classList.remove('active'));
-      document.querySelectorAll('main section').forEach(s => s.classList.remove('active'));
+      sub.querySelectorAll('button').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      document.getElementById(btn.dataset.tab).classList.add('active');
-      const doResize = () => Object.values(Chart.instances).forEach(c => c.resize());
-      requestAnimationFrame(doResize);
-      setTimeout(doResize, 60);
+      showTab(btn.dataset.tab);
+    });
+  });
+  showTab(group.tabs[0].id);
+}
+
+function setupNav() {
+  const groupButtons = document.querySelectorAll('#nav-groups button');
+  groupButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      groupButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      renderSubNav(btn.dataset.group);
     });
   });
 }
