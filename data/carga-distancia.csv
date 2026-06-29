@@ -1,75 +1,82 @@
-ANÁLISIS DE CARGA-DISTANCIA — Layout 0 tentativo (vinculado a CAP y REL),,,,,,
-"Fórmula: C = Σ Fij × dij (distancia Manhattan entre centroides). Fij en kg-equivalente/día (Año 10 Mermeladas / Año 8 Snacks, 239 días activos/año). 1 frasco = 0,3 kg; 1 bolsa = 0,09 kg.",,,,,,
+ANÁLISIS DE CARGA-DISTANCIA — Layout 0 tentativo — MODO DOS LÍNEAS PARALELAS (vinculado a CAP y REL),,,,,,
+"Fórmula: C = Σ Fij × dij (distancia Manhattan entre centroides). Fij en kg-equivalente/día (Año 10 Mermeladas / Año 8 Snacks, 239 días activos/año). Cada línea (Mermeladas y Snacks) corre en paralelo con equipo propio desde Limpieza hasta Envasado.",,,,,,
 ,,,,,,
 COORDENADAS DE CENTROIDES — Layout 0 (m),,,,,,
 Sector,x,y,,,,
 S01 Recepción MP,0,0,,,,
 S02 Almacén MP,5,0,,,,
 S03 Pesado/Selección,10,0,,,,
-S04 Limpieza/Lavado,15,0,,,,
-S05 Pelado,20,0,,,,
-S06 Descarozado,25,0,,,,
-S07 Corte/Pulpeado,30,0,,,,
+S04M Limpieza Mermeladas,15,6,,,,
+S05M Pelado Mermeladas,20,6,,,,
+S06M Descarozado Mermeladas,25,6,,,,
+S07M Pulpeado Mermeladas,30,6,,,,
+S08M Cocción Mermeladas,36,6,,,,
+S09M Envasado Mermeladas,41,6,,,,
+S10 Pasteurizado,46,6,,,,
+S11 Etiquetado/Empaque,51,6,,,,
+S04S Limpieza Snacks,15,-6,,,,
+S05S Pelado Snacks,20,-6,,,,
+S06S Descarozado Snacks,25,-6,,,,
+S07S Cortado Snacks,30,-6,,,,
+S08S Deshidratado Snacks,36,-6,,,,
+S09S Envasado Snacks,41,-6,,,,
+S12 Almacén PT,56,0,,,,
+S13 CC/Laboratorio,20,0,,,,
 S14 Vestuarios/Barrera,32,0,,,,
-S08M Cocción,35,5,,,,
-S09M Envasado Merm.,40,5,,,,
-S10 Pasteurizado,45,5,,,,
-S11 Etiquetado/Empaque,50,0,,,,
-S08S Deshidratado,35,-5,,,,
-S09S Envasado Snack,40,-5,,,,
-S12 Almacén PT,55,0,,,,
-S13 CC/Laboratorio,30,8,,,,
 S15 Oficinas/Admin.,0,8,,,,
 ,,,,,,
 FLUJOS Y CARGA-DISTANCIA — pares con flujo de materiales (relación A),,,,,,
 Sector A,Sector B,Flujo Fij (kg-eq/día),dx,dy,dij = |dx|+|dy|,Cij = Fij×dij
-S01 Recepción MP,S02 Almacén MP,10971.623321171548,5,0,5,54858.11660585774
-S02 Almacén MP,S03 Pesado/Selección,10971.623321171548,5,0,5,54858.11660585774
-S03 Pesado/Selección,S04 Limpieza/Lavado,10971.623321171548,5,0,5,54858.11660585774
-S04 Limpieza/Lavado,S05 Pelado,10861.907087959833,5,0,5,54309.53543979916
-S05 Pelado,S06 Descarozado,10518.124087450242,5,0,5,52590.62043725121
-S06 Descarozado,S07 Corte/Pulpeado,9466.311678705219,5,0,5,47331.558393526095
-S07 Corte/Pulpeado,S08M Cocción,3558.1540552742567,5,5,10,35581.54055274257
-S07 Corte/Pulpeado,S08S Deshidratado,5908.157623430962,5,5,10,59081.57623430962
-S08M Cocción,S09M Envasado Merm.,3391.167539748954,5,0,5,16955.83769874477
-S08S Deshidratado,S09S Envasado Snack,414.43305439330544,5,0,5,2072.165271966527
-S09M Envasado Merm.,S10 Pasteurizado,3391.167539748954,5,0,5,16955.83769874477
-S10 Pasteurizado,S11 Etiquetado/Empaque,3391.167539748954,5,5,10,33911.67539748954
-S09S Envasado Snack,S11 Etiquetado/Empaque,414.43305439330544,10,5,15,6216.495815899581
-S11 Etiquetado/Empaque,S12 Almacén PT,3805.6005941422595,5,0,5,19028.0029707113
+S01 Recepción MP,S02 Almacén MP,11428.77,5,0,5,57143.85
+S02 Almacén MP,S03 Pesado/Selección,11428.77,5,0,5,57143.85
+S03 Pesado/Selección,S04M Limpieza Mermeladas,4340.69,5,6,11,47747.59
+S03 Pesado/Selección,S04S Limpieza Snacks,6630.93,5,6,11,72940.23
+S04M Limpieza Mermeladas,S05M Pelado Mermeladas,4297.29,5,0,5,21486.45
+S04S Limpieza Snacks,S05S Pelado Snacks,6564.62,5,0,5,32823.1
+S05M Pelado Mermeladas,S06M Descarozado Mermeladas,3953.5,5,0,5,19767.5
+S05S Pelado Snacks,S06S Descarozado Snacks,6564.62,5,0,5,32823.1
+S06M Descarozado Mermeladas,S07M Pulpeado Mermeladas,3558.15,5,0,5,17790.75
+S06S Descarozado Snacks,S07S Cortado Snacks,5908.16,5,0,5,29540.8
+S07M Pulpeado Mermeladas,S08M Cocción Mermeladas,3558.15,6,0,6,21348.9
+S07S Cortado Snacks,S08S Deshidratado Snacks,5908.16,6,0,6,35448.96
+S08M Cocción Mermeladas,S09M Envasado Mermeladas,2846.52,5,0,5,14232.6
+S08S Deshidratado Snacks,S09S Envasado Snacks,413.57,5,0,5,2067.85
+S09M Envasado Mermeladas,S10 Pasteurizado,2803.83,5,0,5,14019.15
+S09S Envasado Snacks,S12 Almacén PT,407.37,15,6,21,8554.77
+S10 Pasteurizado,S11 Etiquetado/Empaque,2803.83,5,0,5,14019.15
+S11 Etiquetado/Empaque,S12 Almacén PT,2803.83,5,6,11,30842.13
 ,,,,,,
-RELACIONES E (control de calidad) — flujo de personal/muestras estimado,,,,,,
+"RELACIONES E (control de calidad) — Layout 0, S13 sin optimizar",,,,,,
 Sector A,Sector B,Flujo Fij (kg-eq/día),dx,dy,dij = |dx|+|dy|,Cij = Fij×dij
-S01 Recepción MP,S13 CC/Laboratorio,10,30,8,38,380
-S08M Cocción,S13 CC/Laboratorio,10,5,3,8,80
-S09M Envasado Merm.,S13 CC/Laboratorio,10,10,3,13,130
-S09S Envasado Snack,S13 CC/Laboratorio,10,10,13,23,230
+S01 Recepción MP,S13 CC/Laboratorio,10,20,0,20,200
+S08M Cocción Mermeladas,S13 CC/Laboratorio,10,16,6,22,220
+S09M Envasado Mermeladas,S13 CC/Laboratorio,10,21,6,27,270
+S09S Envasado Snacks,S13 CC/Laboratorio,10,21,6,27,270
 ,,,,,,
 ÍNDICE CARGA-DISTANCIA TOTAL — LAYOUT 0,,,,,,
-C0 (relaciones A),508609.19572875847,,,,,
-C0 (relaciones E),820,,,,,
-C0 TOTAL,509429.19572875847,,,,,
+C0 (relaciones A),529740.73,,,,,
+C0 (relaciones E),960,,,,,
+C0 TOTAL,530700.73,,,,,
 ,,,,,,
 "ITERACIÓN CRAFT — evaluación de intercambios (S01 y S12 excluidos, puertas fijas)",,,,,,
-Conclusión cadena A (S01→S07): la secuencia ya coincide exactamente con el orden del flujo de materiales — cualquier intercambio entre estos sectores rompe al menos una adyacencia y aumenta el costo. No hay mejora posible en la cadena principal con esta topología lineal.,,,,,,
-"Bifurcación S08M/S09M/S10 (Mermeladas) vs S08S/S09S (Snacks): ya está asignada según peso de flujo — la rama de mayor flujo (Mermeladas, 3391 kg-eq/día) quedó a menor distancia de S11 (dij=10) que la de menor flujo (Snacks, 414 kg-eq/día, dij=15). Coherente con el principio de Muther/CRAFT de minimizar Σ(flujo×distancia).",,,,,,
-"Oportunidad detectada: S13 (CC/Laboratorio) en Layout 0 está lejos de los 4 puntos de control que atiende (dij entre 8 y 38). Se prueba reubicación al punto central de la barrera sanitaria (cerca de S14), equidistante de ambas líneas.",,,,,,
+"Conclusión cadena A: con dos líneas paralelas, cada cadena M y S ya sigue el orden exacto de su propio flujo de materiales — no hay intercambio posible dentro de cada línea sin romper una adyacencia A.",,,,,,
+"Oportunidad detectada: S13 (CC/Laboratorio) en Layout 0 está ubicado cerca de la entrada (x=20) pero lejos de los puntos de control en zona limpia (S08M, S09M, S09S, todos a x≈36-41). Se prueba reubicación más cerca del cluster de control de calidad, sobre la barrera sanitaria.",,,,,,
 ,,,,,,
 LAYOUT 1 — Post-CRAFT — Reubicación de S13,,,,,,
 Sector,x (Layout 1),y (Layout 1),,,,
-S13 CC/Laboratorio (nueva posición),32,4,,,,
+S13 CC/Laboratorio (nueva posición),39,0,,,,
 ,,,,,,
 RECÁLCULO RELACIONES E — LAYOUT 1,,,,,,
 Sector A,Sector B,Flujo Fij (kg-eq/día),dx,dy,dij = |dx|+|dy|,Cij = Fij×dij
-S01 Recepción MP,S13 CC/Laboratorio,10,32,4,36,360
-S08M Cocción,S13 CC/Laboratorio,10,3,1,4,40
-S09M Envasado Merm.,S13 CC/Laboratorio,10,8,1,9,90
-S09S Envasado Snack,S13 CC/Laboratorio,10,8,9,17,170
+S01 Recepción MP,S13 CC/Laboratorio,10,39,0,39,390
+S08M Cocción Mermeladas,S13 CC/Laboratorio,10,3,6,9,90
+S09M Envasado Mermeladas,S13 CC/Laboratorio,10,2,6,8,80
+S09S Envasado Snacks,S13 CC/Laboratorio,10,2,6,8,80
 ,,,,,,
 ÍNDICE CARGA-DISTANCIA — LAYOUT 1,,,,,,
-"C1 (relaciones A, sin cambios)",508609.19572875847,,,,,
-"C1 (relaciones E, recalculado)",660,,,,,
-C1 TOTAL,509269.19572875847,,,,,
-ΔC = C0 − C1 (mejora),160,,,,,
+"C1 (relaciones A, sin cambios)",529740.73,,,,,
+"C1 (relaciones E, recalculado)",640,,,,,
+C1 TOTAL,530380.73,,,,,
+ΔC = C0 − C1 (mejora),320,,,,,
 ,,,,,,
-"CONCLUSIÓN: el Layout 1 reduce el índice de carga-distancia respecto al Layout 0 (mejora menor, las relaciones E pesan muy poco frente a las A). La cadena de proceso principal (S01→S12) queda confirmada como óptima para esta topología lineal bifurcada — no requiere más iteraciones de CRAFT. El layout queda listo para pasar a AutoCAD con: cadena lineal S01-S07, barrera sanitaria S14 en x=32, bifurcación simétrica Mermeladas (arriba)/Snacks (abajo) desde S07 hasta S11, laboratorio S13 centrado sobre la barrera, oficinas S15 fuera del flujo productivo.",,,,,,
+"CONCLUSIÓN: con dos líneas paralelas independientes desde Limpieza hasta Envasado, la superficie productiva neta sube de 156,34 m² a 309,24 m² (Guerchet, +98%) porque cada línea tiene su propio equipo — el costo de transporte total (C) sube levemente respecto al diseño con sectores compartidos (530.381 vs 509.269 kg·m/día), pero se logra mejor aislamiento entre líneas, mayor flexibilidad de programación (cada línea puede parar/arrancar independiente) y separación más clara de BPM por línea. El layout queda listo para AutoCAD con: backbone compartido S01-S03, bifurcación en dos filas paralelas (Mermeladas arriba, Snacks abajo) desde S04 hasta envasado, laboratorio S13 centrado sobre el cluster de control de calidad, oficinas S15 fuera del flujo productivo.",,,,,,

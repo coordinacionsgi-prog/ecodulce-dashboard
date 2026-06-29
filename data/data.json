@@ -571,28 +571,52 @@
         "m2": 2.0
       },
       {
-        "codigo": "S04",
-        "nombre": "Limpieza / Lavado (Mermeladas+Snacks)",
+        "codigo": "S04M",
+        "nombre": "Limpieza/Lavado Mermeladas",
         "zona": "Zona Sucia",
-        "m2": 37.125
+        "m2": 10.125
       },
       {
-        "codigo": "S05",
-        "nombre": "Pelado (Mermeladas+Snacks)",
+        "codigo": "S04S",
+        "nombre": "Limpieza/Lavado Snacks",
         "zona": "Zona Sucia",
-        "m2": 33.5295
+        "m2": 27.0
       },
       {
-        "codigo": "S06",
-        "nombre": "Descarozado (Mermeladas+Snacks)",
+        "codigo": "S05M",
+        "nombre": "Pelado Mermeladas",
         "zona": "Zona Sucia",
-        "m2": 13.5
+        "m2": 9.72
       },
       {
-        "codigo": "S07",
-        "nombre": "Corte / Pulpeado (Mermeladas+Snacks)",
+        "codigo": "S05S",
+        "nombre": "Pelado Snacks",
         "zona": "Zona Sucia",
-        "m2": 20.322000000000003
+        "m2": 23.8095
+      },
+      {
+        "codigo": "S06M",
+        "nombre": "Descarozado Mermeladas",
+        "zona": "Zona Sucia",
+        "m2": 5.4
+      },
+      {
+        "codigo": "S06S",
+        "nombre": "Descarozado Snacks",
+        "zona": "Zona Sucia",
+        "m2": 8.1
+      },
+      {
+        "codigo": "S07M",
+        "nombre": "Pulpeado Mermeladas",
+        "zona": "Zona Sucia",
+        "m2": 17.082
+      },
+      {
+        "codigo": "S07S",
+        "nombre": "Cortado Snacks",
+        "zona": "Zona Sucia",
+        "m2": 3.24
       },
       {
         "codigo": "S08M",
@@ -604,7 +628,7 @@
         "codigo": "S08S",
         "nombre": "Deshidratado Snacks",
         "zona": "Zona Limpia",
-        "m2": 17.339999999999996
+        "m2": 17.34
       },
       {
         "codigo": "S09M",
@@ -620,15 +644,15 @@
       },
       {
         "codigo": "S10",
-        "nombre": "Pasteurizado",
+        "nombre": "Pasteurizado (solo Mermeladas)",
         "zona": "Zona Limpia",
-        "m2": 19.200000000000003
+        "m2": 19.2
       },
       {
         "codigo": "S11",
-        "nombre": "Etiquetado / Empaque",
+        "nombre": "Etiquetado / Empaque (solo Mermeladas)",
         "zona": "Zona Limpia",
-        "m2": 8.100000000000001
+        "m2": 8.1
       },
       {
         "codigo": "S12",
@@ -667,22 +691,27 @@
         "motivo": "Aerosoles de zona sucia contaminan línea de envasado en caliente"
       },
       {
-        "a": "S04 Limpieza/Lavado",
-        "b": "S09M Envasado Mermeladas",
-        "motivo": "Agua de lavado y aerosoles alcanzan área de envasado"
-      },
-      {
-        "a": "S04 Limpieza/Lavado",
+        "a": "S01 Recepción MP",
         "b": "S09S Envasado Snacks",
         "motivo": "Ídem para línea Snacks"
       },
       {
-        "a": "S05 Pelado",
+        "a": "S04M Limpieza Mermeladas",
         "b": "S09M Envasado Mermeladas",
-        "motivo": "Residuos orgánicos del pelado contaminan el área de envasado"
+        "motivo": "Agua de lavado y aerosoles de su propia línea alcanzan el área de envasado"
       },
       {
-        "a": "S05 Pelado",
+        "a": "S04S Limpieza Snacks",
+        "b": "S09S Envasado Snacks",
+        "motivo": "Ídem para línea Snacks"
+      },
+      {
+        "a": "S05M Pelado Mermeladas",
+        "b": "S09M Envasado Mermeladas",
+        "motivo": "Residuos orgánicos del pelado (línea propia) contaminan el área de envasado"
+      },
+      {
+        "a": "S05S Pelado Snacks",
         "b": "S09S Envasado Snacks",
         "motivo": "Ídem para línea Snacks"
       }
@@ -702,57 +731,73 @@
         "x": 10.0,
         "y": 0.0
       },
-      "S04 Limpieza/Lavado": {
+      "S04M Limpieza Mermeladas": {
         "x": 15.0,
-        "y": 0.0
+        "y": 6.0
       },
-      "S05 Pelado": {
+      "S05M Pelado Mermeladas": {
         "x": 20.0,
-        "y": 0.0
+        "y": 6.0
       },
-      "S06 Descarozado": {
+      "S06M Descarozado Mermeladas": {
         "x": 25.0,
+        "y": 6.0
+      },
+      "S07M Pulpeado Mermeladas": {
+        "x": 30.0,
+        "y": 6.0
+      },
+      "S08M Cocción Mermeladas": {
+        "x": 36.0,
+        "y": 6.0
+      },
+      "S09M Envasado Mermeladas": {
+        "x": 41.0,
+        "y": 6.0
+      },
+      "S10 Pasteurizado": {
+        "x": 46.0,
+        "y": 6.0
+      },
+      "S11 Etiquetado/Empaque": {
+        "x": 51.0,
+        "y": 6.0
+      },
+      "S04S Limpieza Snacks": {
+        "x": 15.0,
+        "y": -6.0
+      },
+      "S05S Pelado Snacks": {
+        "x": 20.0,
+        "y": -6.0
+      },
+      "S06S Descarozado Snacks": {
+        "x": 25.0,
+        "y": -6.0
+      },
+      "S07S Cortado Snacks": {
+        "x": 30.0,
+        "y": -6.0
+      },
+      "S08S Deshidratado Snacks": {
+        "x": 36.0,
+        "y": -6.0
+      },
+      "S09S Envasado Snacks": {
+        "x": 41.0,
+        "y": -6.0
+      },
+      "S12 Almacén PT": {
+        "x": 56.0,
         "y": 0.0
       },
-      "S07 Corte/Pulpeado": {
-        "x": 30.0,
+      "S13 CC/Laboratorio": {
+        "x": 39.0,
         "y": 0.0
       },
       "S14 Vestuarios/Barrera": {
         "x": 32.0,
         "y": 0.0
-      },
-      "S08M Cocción": {
-        "x": 35.0,
-        "y": 5.0
-      },
-      "S09M Envasado Merm.": {
-        "x": 40.0,
-        "y": 5.0
-      },
-      "S10 Pasteurizado": {
-        "x": 45.0,
-        "y": 5.0
-      },
-      "S11 Etiquetado/Empaque": {
-        "x": 50.0,
-        "y": 0.0
-      },
-      "S08S Deshidratado": {
-        "x": 35.0,
-        "y": -5.0
-      },
-      "S09S Envasado Snack": {
-        "x": 40.0,
-        "y": -5.0
-      },
-      "S12 Almacén PT": {
-        "x": 55.0,
-        "y": 0.0
-      },
-      "S13 CC/Laboratorio": {
-        "x": 32.0,
-        "y": 4.0
       },
       "S15 Oficinas/Admin.": {
         "x": 0.0,
@@ -763,72 +808,92 @@
       {
         "a": "S01 Recepción MP",
         "b": "S02 Almacén MP",
-        "fij": 10971.623321171548
+        "fij": 11428.77
       },
       {
         "a": "S02 Almacén MP",
         "b": "S03 Pesado/Selección",
-        "fij": 10971.623321171548
+        "fij": 11428.77
       },
       {
         "a": "S03 Pesado/Selección",
-        "b": "S04 Limpieza/Lavado",
-        "fij": 10971.623321171548
+        "b": "S04M Limpieza Mermeladas",
+        "fij": 4340.69
       },
       {
-        "a": "S04 Limpieza/Lavado",
-        "b": "S05 Pelado",
-        "fij": 10861.907087959833
+        "a": "S03 Pesado/Selección",
+        "b": "S04S Limpieza Snacks",
+        "fij": 6630.93
       },
       {
-        "a": "S05 Pelado",
-        "b": "S06 Descarozado",
-        "fij": 10518.124087450242
+        "a": "S04M Limpieza Mermeladas",
+        "b": "S05M Pelado Mermeladas",
+        "fij": 4297.29
       },
       {
-        "a": "S06 Descarozado",
-        "b": "S07 Corte/Pulpeado",
-        "fij": 9466.311678705219
+        "a": "S04S Limpieza Snacks",
+        "b": "S05S Pelado Snacks",
+        "fij": 6564.62
       },
       {
-        "a": "S07 Corte/Pulpeado",
-        "b": "S08M Cocción",
-        "fij": 3558.1540552742567
+        "a": "S05M Pelado Mermeladas",
+        "b": "S06M Descarozado Mermeladas",
+        "fij": 3953.5
       },
       {
-        "a": "S07 Corte/Pulpeado",
-        "b": "S08S Deshidratado",
-        "fij": 5908.157623430962
+        "a": "S05S Pelado Snacks",
+        "b": "S06S Descarozado Snacks",
+        "fij": 6564.62
       },
       {
-        "a": "S08M Cocción",
-        "b": "S09M Envasado Merm.",
-        "fij": 3391.167539748954
+        "a": "S06M Descarozado Mermeladas",
+        "b": "S07M Pulpeado Mermeladas",
+        "fij": 3558.15
       },
       {
-        "a": "S08S Deshidratado",
-        "b": "S09S Envasado Snack",
-        "fij": 414.43305439330544
+        "a": "S06S Descarozado Snacks",
+        "b": "S07S Cortado Snacks",
+        "fij": 5908.16
       },
       {
-        "a": "S09M Envasado Merm.",
+        "a": "S07M Pulpeado Mermeladas",
+        "b": "S08M Cocción Mermeladas",
+        "fij": 3558.15
+      },
+      {
+        "a": "S07S Cortado Snacks",
+        "b": "S08S Deshidratado Snacks",
+        "fij": 5908.16
+      },
+      {
+        "a": "S08M Cocción Mermeladas",
+        "b": "S09M Envasado Mermeladas",
+        "fij": 2846.52
+      },
+      {
+        "a": "S08S Deshidratado Snacks",
+        "b": "S09S Envasado Snacks",
+        "fij": 413.57
+      },
+      {
+        "a": "S09M Envasado Mermeladas",
         "b": "S10 Pasteurizado",
-        "fij": 3391.167539748954
+        "fij": 2803.83
+      },
+      {
+        "a": "S09S Envasado Snacks",
+        "b": "S12 Almacén PT",
+        "fij": 407.37
       },
       {
         "a": "S10 Pasteurizado",
         "b": "S11 Etiquetado/Empaque",
-        "fij": 3391.167539748954
-      },
-      {
-        "a": "S09S Envasado Snack",
-        "b": "S11 Etiquetado/Empaque",
-        "fij": 414.43305439330544
+        "fij": 2803.83
       },
       {
         "a": "S11 Etiquetado/Empaque",
         "b": "S12 Almacén PT",
-        "fij": 3805.6005941422595
+        "fij": 2803.83
       }
     ],
     "flujos_e": [
@@ -838,27 +903,27 @@
         "fij": 10.0
       },
       {
-        "a": "S08M Cocción",
+        "a": "S08M Cocción Mermeladas",
         "b": "S13 CC/Laboratorio",
         "fij": 10.0
       },
       {
-        "a": "S09M Envasado Merm.",
+        "a": "S09M Envasado Mermeladas",
         "b": "S13 CC/Laboratorio",
         "fij": 10.0
       },
       {
-        "a": "S09S Envasado Snack",
+        "a": "S09S Envasado Snacks",
         "b": "S13 CC/Laboratorio",
         "fij": 10.0
       }
     ],
-    "C0_A": 508609.19572875847,
-    "C0_E": 820.0,
-    "C0_TOTAL": 509429.19572875847,
-    "C1_A": 508609.19572875847,
-    "C1_E": 660.0,
-    "C1_TOTAL": 509269.19572875847
+    "C0_A": 529740.73,
+    "C0_E": 960.0,
+    "C0_TOTAL": 530700.73,
+    "C1_A": 529740.73,
+    "C1_E": 640.0,
+    "C1_TOTAL": 530380.73
   },
   "fichas_tecnicas": {
     "mermeladas": [
