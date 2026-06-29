@@ -23,20 +23,20 @@ S15 Oficinas/Admin.,0,8,,,,
 ,,,,,,
 FLUJOS Y CARGA-DISTANCIA — pares con flujo de materiales (relación A),,,,,,
 Sector A,Sector B,Flujo Fij (kg-eq/día),dx,dy,dij = |dx|+|dy|,Cij = Fij×dij
-S01 Recepción MP,S02 Almacén MP,10971.62332,5,0,5,54858.11661
-S02 Almacén MP,S03 Pesado/Selección,10971.62332,5,0,5,54858.11661
-S03 Pesado/Selección,S04 Limpieza/Lavado,10971.62332,5,0,5,54858.11661
-S04 Limpieza/Lavado,S05 Pelado,10861.90709,5,0,5,54309.53544
-S05 Pelado,S06 Descarozado,10518.12409,5,0,5,52590.62044
-S06 Descarozado,S07 Corte/Pulpeado,9466.311679,5,0,5,47331.55839
-S07 Corte/Pulpeado,S08M Cocción,3558.154055,5,5,10,35581.54055
-S07 Corte/Pulpeado,S08S Deshidratado,5908.157623,5,5,10,59081.57623
-S08M Cocción,S09M Envasado Merm.,3391.16754,5,0,5,16955.8377
-S08S Deshidratado,S09S Envasado Snack,414.4330544,5,0,5,2072.165272
-S09M Envasado Merm.,S10 Pasteurizado,3391.16754,5,0,5,16955.8377
-S10 Pasteurizado,S11 Etiquetado/Empaque,3391.16754,5,5,10,33911.6754
-S09S Envasado Snack,S11 Etiquetado/Empaque,414.4330544,10,5,15,6216.495816
-S11 Etiquetado/Empaque,S12 Almacén PT,3805.600594,5,0,5,19028.00297
+S01 Recepción MP,S02 Almacén MP,10971.623321171548,5,0,5,54858.11660585774
+S02 Almacén MP,S03 Pesado/Selección,10971.623321171548,5,0,5,54858.11660585774
+S03 Pesado/Selección,S04 Limpieza/Lavado,10971.623321171548,5,0,5,54858.11660585774
+S04 Limpieza/Lavado,S05 Pelado,10861.907087959833,5,0,5,54309.53543979916
+S05 Pelado,S06 Descarozado,10518.124087450242,5,0,5,52590.62043725121
+S06 Descarozado,S07 Corte/Pulpeado,9466.311678705219,5,0,5,47331.558393526095
+S07 Corte/Pulpeado,S08M Cocción,3558.1540552742567,5,5,10,35581.54055274257
+S07 Corte/Pulpeado,S08S Deshidratado,5908.157623430962,5,5,10,59081.57623430962
+S08M Cocción,S09M Envasado Merm.,3391.167539748954,5,0,5,16955.83769874477
+S08S Deshidratado,S09S Envasado Snack,414.43305439330544,5,0,5,2072.165271966527
+S09M Envasado Merm.,S10 Pasteurizado,3391.167539748954,5,0,5,16955.83769874477
+S10 Pasteurizado,S11 Etiquetado/Empaque,3391.167539748954,5,5,10,33911.67539748954
+S09S Envasado Snack,S11 Etiquetado/Empaque,414.43305439330544,10,5,15,6216.495815899581
+S11 Etiquetado/Empaque,S12 Almacén PT,3805.6005941422595,5,0,5,19028.0029707113
 ,,,,,,
 RELACIONES E (control de calidad) — flujo de personal/muestras estimado,,,,,,
 Sector A,Sector B,Flujo Fij (kg-eq/día),dx,dy,dij = |dx|+|dy|,Cij = Fij×dij
@@ -46,9 +46,9 @@ S09M Envasado Merm.,S13 CC/Laboratorio,10,10,3,13,130
 S09S Envasado Snack,S13 CC/Laboratorio,10,10,13,23,230
 ,,,,,,
 ÍNDICE CARGA-DISTANCIA TOTAL — LAYOUT 0,,,,,,
-C0 (relaciones A),508609.1957,,,,,
+C0 (relaciones A),508609.19572875847,,,,,
 C0 (relaciones E),820,,,,,
-C0 TOTAL,509429.1957,,,,,
+C0 TOTAL,509429.19572875847,,,,,
 ,,,,,,
 "ITERACIÓN CRAFT — evaluación de intercambios (S01 y S12 excluidos, puertas fijas)",,,,,,
 Conclusión cadena A (S01→S07): la secuencia ya coincide exactamente con el orden del flujo de materiales — cualquier intercambio entre estos sectores rompe al menos una adyacencia y aumenta el costo. No hay mejora posible en la cadena principal con esta topología lineal.,,,,,,
@@ -67,9 +67,9 @@ S09M Envasado Merm.,S13 CC/Laboratorio,10,8,1,9,90
 S09S Envasado Snack,S13 CC/Laboratorio,10,8,9,17,170
 ,,,,,,
 ÍNDICE CARGA-DISTANCIA — LAYOUT 1,,,,,,
-"C1 (relaciones A, sin cambios)",508609.1957,,,,,
+"C1 (relaciones A, sin cambios)",508609.19572875847,,,,,
 "C1 (relaciones E, recalculado)",660,,,,,
-C1 TOTAL,509269.1957,,,,,
+C1 TOTAL,509269.19572875847,,,,,
 ΔC = C0 − C1 (mejora),160,,,,,
 ,,,,,,
 "CONCLUSIÓN: el Layout 1 reduce el índice de carga-distancia respecto al Layout 0 (mejora menor, las relaciones E pesan muy poco frente a las A). La cadena de proceso principal (S01→S12) queda confirmada como óptima para esta topología lineal bifurcada — no requiere más iteraciones de CRAFT. El layout queda listo para pasar a AutoCAD con: cadena lineal S01-S07, barrera sanitaria S14 en x=32, bifurcación simétrica Mermeladas (arriba)/Snacks (abajo) desde S07 hasta S11, laboratorio S13 centrado sobre la barrera, oficinas S15 fuera del flujo productivo.",,,,,,
