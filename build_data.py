@@ -96,12 +96,16 @@ def parse_guerchet(rows):
 
 def parse_rel(rows):
     sectores = []
+    relaciones_x = []
     in_table = False
+    in_x = False
     for r in rows:
         if not r:
             continue
-        if r[0].strip() == "Código" and len(r) > 1 and r[1].strip() == "Nombre":
+        c0 = r[0].strip() if r[0] else ""
+        if c0 == "Código" and len(r) > 1 and r[1].strip() == "Nombre":
             in_table = True
+            in_x = False
             continue
         if in_table:
             if not r[0] or r[0].startswith("TOTAL") or r[0].startswith("RELACIONES"):
@@ -114,15 +118,58 @@ def parse_rel(rows):
                     "zona": r[2],
                     "m2": to_float(r[3]),
                 })
-    return sectores
+        if c0.startswith("RELACIONES X"):
+            in_x = True
+            continue
+        if in_x:
+            if c0 == "Sector A" or not c0:
+                if not c0:
+                    in_x = False
+                continue
+            if c0.startswith("ZONIFICACIÓN"):
+                in_x = False
+                continue
+            if len(r) >= 3:
+                relaciones_x.append({"a": r[0], "b": r[1], "motivo": r[2]})
+    return {"sectores": sectores, "relaciones_x": relaciones_x}
 
 
 def parse_carga_distancia(rows):
-    out = {}
+    out = {"coordenadas": {}, "flujos_a": [], "flujos_e": []}
+    section = None
     for r in rows:
         if not r:
             continue
         c0 = r[0].strip() if r[0] else ""
+        if c0 == "COORDENADAS DE CENTROIDES — Layout 0 (m)":
+            section = "coords"
+            continue
+        if c0 == "FLUJOS Y CARGA-DISTANCIA — pares con flujo de materiales (relación A)":
+            section = "flujos_a"
+            continue
+        if c0.startswith("RELACIONES E (control de calidad)"):
+            section = "flujos_e"
+            continue
+        if c0.startswith("LAYOUT 1"):
+            section = "coords"  # overrides (e.g. S13 reubicado)
+            continue
+        if c0.startswith("RECÁLCULO RELACIONES E") or c0.startswith("ÍNDICE") or c0.startswith("ITERACIÓN"):
+            section = None
+        if c0 == "Sector" and len(r) > 1 and "x" in r[1]:
+            continue
+        if c0 == "Sector A":
+            continue
+
+        if section == "coords" and len(r) >= 3 and c0:
+            x, y = to_float(r[1]), to_float(r[2])
+            if x is not None and y is not None:
+                key = c0.replace(" (nueva posición)", "")
+                out["coordenadas"][key] = {"x": x, "y": y}
+        elif section in ("flujos_a", "flujos_e") and len(r) >= 3 and c0:
+            fij = to_float(r[2])
+            if fij is not None:
+                out[section].append({"a": c0, "b": r[1], "fij": fij})
+
         if c0 == "C0 (relaciones A)":
             out["C0_A"] = to_float(r[1])
         elif c0 == "C0 (relaciones E)":
@@ -242,5 +289,5 @@ with open(out_path, "w", encoding="utf-8") as f:
 print(f"OK -> {out_path}")
 print("Plan ventas mermeladas:", len(data["plan_ventas"]["mermeladas"]))
 print("CAP bloques:", len(data["cap"]))
-print("REL sectores:", len(data["rel"]))
-print("Carga-distancia:", data["carga_distancia"])
+print("REL sectores:", len(data["rel"]["sectores"]))
+print("Carga-distancia coords:", len(data["carga_distancia"]["coordenadas"]))

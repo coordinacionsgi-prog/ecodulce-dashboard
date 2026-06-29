@@ -1,5 +1,5 @@
 const COLORS = {
-  merm: '#e8a93e', snack: '#5b9bd5', accent: '#4fd1a5',
+  merm: '#e8a93e', snack: '#5b9bd5', accent: '#4fd1a5', danger: '#e85d5d',
   grid: 'rgba(255,255,255,.06)', text: '#8b98a8',
   palette: ['#4fd1a5','#5b9bd5','#e8a93e','#e85d5d','#b08fe0','#5cd6d6','#d6a45c','#9bd65c']
 };
@@ -317,8 +317,8 @@ function buildLayout() {
   new Chart('chart-rel', {
     type: 'bar',
     data: {
-      labels: DATA.rel.map(s => s.codigo),
-      datasets: [{ label: 'm²', data: DATA.rel.map(s => s.m2), backgroundColor: DATA.rel.map(s => s.zona === 'Zona Sucia' ? COLORS.merm : s.zona === 'Zona Limpia' ? COLORS.snack : COLORS.accent), borderRadius: 4 }]
+      labels: DATA.rel.sectores.map(s => s.codigo),
+      datasets: [{ label: 'm²', data: DATA.rel.sectores.map(s => s.m2), backgroundColor: DATA.rel.sectores.map(s => s.zona === 'Zona Sucia' ? COLORS.merm : s.zona === 'Zona Limpia' ? COLORS.snack : COLORS.accent), borderRadius: 4 }]
     },
     options: baseOpts()
   });
@@ -331,6 +331,94 @@ function buildLayout() {
     },
     options: { ...baseOpts(), indexAxis: 'y' }
   });
+
+  buildRelDiagram();
+}
+
+function buildRelDiagram() {
+  const sectores = DATA.rel.sectores;
+  const coords = DATA.carga_distancia.coordenadas;
+  const flujosA = DATA.carga_distancia.flujos_a;
+  const flujosE = DATA.carga_distancia.flujos_e;
+  const relX = DATA.rel.relaciones_x;
+
+  const codigoOf = (nombreCompleto) => nombreCompleto.split(' ')[0];
+  const sectorByCodigo = {};
+  sectores.forEach(s => { sectorByCodigo[s.codigo] = s; });
+
+  const nodes = Object.entries(coords).map(([nombreCompleto, xy]) => {
+    const cod = codigoOf(nombreCompleto);
+    const s = sectorByCodigo[cod] || {};
+    return { nombreCompleto, codigo: cod, nombre: s.nombre || nombreCompleto, zona: s.zona || '', m2: s.m2 || 4, x: xy.x, y: xy.y };
+  });
+  const nodeByCodigo = {};
+  nodes.forEach(n => { nodeByCodigo[n.codigo] = n; });
+
+  const PX_PER_M = 13;
+  const xs = nodes.map(n => n.x), ys = nodes.map(n => n.y);
+  const minX = Math.min(...xs), maxX = Math.max(...xs);
+  const minY = Math.min(...ys), maxY = Math.max(...ys);
+  const PAD = 60;
+  const W = (maxX - minX) * PX_PER_M + PAD * 2;
+  const H = (maxY - minY) * PX_PER_M + PAD * 2;
+  const px = (x) => (x - minX) * PX_PER_M + PAD;
+  const py = (y) => (maxY - y) * PX_PER_M + PAD; // flip so +y is up
+
+  const sizeOf = (m2) => Math.max(26, Math.sqrt(m2) * 9);
+
+  const zonaColor = (zona) => zona === 'Zona Sucia' ? COLORS.merm
+    : zona === 'Zona Limpia' ? COLORS.snack
+    : zona === 'Transición BPM' ? '#9bd65c'
+    : '#b08fe0';
+
+  const lines = [];
+  const maxFij = Math.max(...flujosA.map(f => f.fij));
+  flujosA.forEach(f => {
+    const a = nodeByCodigo[codigoOf(f.a)], b = nodeByCodigo[codigoOf(f.b)];
+    if (!a || !b) return;
+    const sw = 1.5 + (f.fij / maxFij) * 7;
+    lines.push(`<line x1="${px(a.x)}" y1="${py(a.y)}" x2="${px(b.x)}" y2="${py(b.y)}" stroke="${COLORS.accent}" stroke-width="${sw.toFixed(1)}" stroke-linecap="round" opacity="0.85"/>`);
+  });
+  flujosE.forEach(f => {
+    const a = nodeByCodigo[codigoOf(f.a)], b = nodeByCodigo[codigoOf(f.b)];
+    if (!a || !b) return;
+    lines.push(`<line x1="${px(a.x)}" y1="${py(a.y)}" x2="${px(b.x)}" y2="${py(b.y)}" stroke="${COLORS.snack}" stroke-width="2" stroke-dasharray="6,4" opacity="0.8"/>`);
+  });
+  relX.forEach(rel => {
+    const a = nodeByCodigo[codigoOf(rel.a)], b = nodeByCodigo[codigoOf(rel.b)];
+    if (!a || !b) return;
+    lines.push(`<line x1="${px(a.x)}" y1="${py(a.y)}" x2="${px(b.x)}" y2="${py(b.y)}" stroke="${COLORS.danger}" stroke-width="1.5" stroke-dasharray="2,5" opacity="0.55"/>`);
+  });
+
+  const boxes = nodes.map(n => {
+    const s = sizeOf(n.m2);
+    const x = px(n.x) - s / 2, y = py(n.y) - s / 2;
+    return `<g>
+      <rect x="${x.toFixed(1)}" y="${y.toFixed(1)}" width="${s.toFixed(1)}" height="${s.toFixed(1)}" rx="6"
+        fill="${zonaColor(n.zona)}" fill-opacity="0.85" stroke="#0f1419" stroke-width="1.5">
+        <title>${n.codigo} — ${n.nombre} (${fmt(n.m2, 1)} m²)</title>
+      </rect>
+      <text x="${px(n.x)}" y="${(py(n.y) - s / 2 - 6).toFixed(1)}" text-anchor="middle" font-size="10" font-weight="700" fill="${COLORS.text}">${n.codigo}</text>
+    </g>`;
+  }).join('');
+
+  const svg = `<svg viewBox="0 0 ${W} ${H}" width="100%" height="${Math.min(H, 520)}" style="background:var(--panel2);border-radius:10px">
+    ${lines.join('')}
+    ${boxes}
+  </svg>`;
+
+  const legend = `
+    <div style="display:flex;gap:18px;flex-wrap:wrap;font-size:.78rem;color:var(--muted);margin-top:10px">
+      <span><svg width="22" height="6"><line x1="0" y1="3" x2="22" y2="3" stroke="${COLORS.accent}" stroke-width="4"/></svg> Flujo de materiales (A) — grosor ∝ kg-eq/día</span>
+      <span><svg width="22" height="6"><line x1="0" y1="3" x2="22" y2="3" stroke="${COLORS.snack}" stroke-width="2" stroke-dasharray="4,3"/></svg> Control de calidad (E)</span>
+      <span><svg width="22" height="6"><line x1="0" y1="3" x2="22" y2="3" stroke="${COLORS.danger}" stroke-width="1.5" stroke-dasharray="2,4"/></svg> No deseable (X) — riesgo BPM</span>
+      <span><span style="display:inline-block;width:10px;height:10px;background:${COLORS.merm};border-radius:2px"></span> Zona Sucia</span>
+      <span><span style="display:inline-block;width:10px;height:10px;background:${COLORS.snack};border-radius:2px"></span> Zona Limpia</span>
+      <span><span style="display:inline-block;width:10px;height:10px;background:#9bd65c;border-radius:2px"></span> Transición BPM</span>
+      <span><span style="display:inline-block;width:10px;height:10px;background:#b08fe0;border-radius:2px"></span> Administración</span>
+    </div>`;
+
+  document.getElementById('rel-diagram').innerHTML = svg + legend;
 }
 
 function baseOpts(tickFmt) {
