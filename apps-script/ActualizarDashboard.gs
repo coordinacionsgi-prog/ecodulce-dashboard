@@ -43,6 +43,7 @@ function onOpen() {
   SpreadsheetApp.getUi()
     .createMenu("📊 Dashboard")
     .addItem("Actualizar ahora", "actualizarDashboard")
+    .addItem("Aplicar formato de fichas a todo el Sheet", "aplicarFormatoFichas")
     .addToUi();
 }
 
