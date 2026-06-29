@@ -134,56 +134,56 @@
           "unidad": "kg",
           "requerido": 244100.352,
           "maquinas": 1.0,
-          "aprovechamiento": 0.3989610879
+          "aprovechamiento": 0.3989610878661088
         },
         {
           "seccion": "Pelado",
           "unidad": "kg",
-          "requerido": 241659.3485,
+          "requerido": 241659.34848000002,
           "maquinas": 1.0,
-          "aprovechamiento": 0.7181299582
+          "aprovechamiento": 0.7181299581589958
         },
         {
           "seccion": "Descarozado",
           "unidad": "kg",
-          "requerido": 222326.6006,
+          "requerido": 222326.60060160002,
           "maquinas": 1.0,
-          "aprovechamiento": 0.7267475177
+          "aprovechamiento": 0.7267475176569038
         },
         {
           "seccion": "Pulpeado",
           "unidad": "kg",
-          "requerido": 200093.9405,
+          "requerido": 200093.94054144,
           "maquinas": 1.0,
-          "aprovechamiento": 0.7267475177
+          "aprovechamiento": 0.7267475176569038
         },
         {
           "seccion": "Cocción",
           "unidad": "kg",
-          "requerido": 200093.9405,
+          "requerido": 200093.94054144,
           "maquinas": 1.0,
-          "aprovechamiento": 0.6540727659
+          "aprovechamiento": 0.6540727658912134
         },
         {
           "seccion": "Llenado",
           "unidad": "frascos",
           "requerido": 635678.0,
           "maquinas": 1.0,
-          "aprovechamiento": 0.6233735829
+          "aprovechamiento": 0.6233735829228804
         },
         {
           "seccion": "Etiquetado",
           "unidad": "frascos",
           "requerido": 635678.0,
           "maquinas": 2.0,
-          "aprovechamiento": 0.593692095
+          "aprovechamiento": 0.5936920950388523
         },
         {
           "seccion": "Pasteurizado",
           "unidad": "frascos",
           "requerido": 635678.0,
           "maquinas": 2.0,
-          "aprovechamiento": 0.5194805832
+          "aprovechamiento": 0.5194805831589958
         }
       ]
     },
@@ -193,58 +193,58 @@
         {
           "seccion": "Limpieza",
           "unidad": "kg",
-          "requerido": 732300.6874,
+          "requerido": 732300.68736,
           "maquinas": 1.0,
-          "aprovechamiento": 0.5984413305
+          "aprovechamiento": 0.598441330543933
         },
         {
           "seccion": "Pelado",
           "unidad": "kg",
-          "requerido": 724977.6805,
+          "requerido": 724977.6804864,
           "maquinas": 2.0,
-          "aprovechamiento": 0.5385971975
+          "aprovechamiento": 0.5385971974895398
         },
         {
           "seccion": "Descarozado",
           "unidad": "kg",
-          "requerido": 666979.466,
+          "requerido": 666979.466047488,
           "maquinas": 2.0,
-          "aprovechamiento": 0.5450603639
+          "aprovechamiento": 0.5450603638594143
         },
         {
           "seccion": "Pulpeado",
           "unidad": "kg",
-          "requerido": 600281.5194,
+          "requerido": 600281.5194427392,
           "maquinas": 2.0,
-          "aprovechamiento": 0.5450603639
+          "aprovechamiento": 0.5450603638594143
         },
         {
           "seccion": "Cocción",
           "unidad": "kg",
-          "requerido": 600281.5194,
+          "requerido": 600281.5194427392,
           "maquinas": 1.0,
-          "aprovechamiento": 0.9811086549
+          "aprovechamiento": 0.9811086549469457
         },
         {
           "seccion": "Llenado",
           "unidad": "frascos",
           "requerido": 1907033.04,
           "maquinas": 1.0,
-          "aprovechamiento": 0.9350599037
+          "aprovechamiento": 0.9350599036753771
         },
         {
           "seccion": "Etiquetado",
           "unidad": "frascos",
           "requerido": 1907033.04,
           "maquinas": 2.0,
-          "aprovechamiento": 0.8905376943
+          "aprovechamiento": 0.8905376942618052
         },
         {
           "seccion": "Pasteurizado",
           "unidad": "frascos",
           "requerido": 1907033.04,
           "maquinas": 2.0,
-          "aprovechamiento": 0.7792204825
+          "aprovechamiento": 0.7792204824790795
         }
       ]
     },
@@ -254,58 +254,58 @@
         {
           "seccion": "Limpieza",
           "unidad": "kg",
-          "requerido": 1037425.974,
+          "requerido": 1037425.9737600001,
           "maquinas": 1.0,
-          "aprovechamiento": 0.56519459
+          "aprovechamiento": 0.5651945899581591
         },
         {
           "seccion": "Pelado",
           "unidad": "kg",
-          "requerido": 1027051.714,
+          "requerido": 1027051.7140224001,
           "maquinas": 2.0,
-          "aprovechamiento": 0.508675131
+          "aprovechamiento": 0.5086751309623432
         },
         {
           "seccion": "Descarozado",
           "unidad": "kg",
-          "requerido": 944887.5769,
+          "requerido": 944887.5769006081,
           "maquinas": 2.0,
-          "aprovechamiento": 0.5147792325
+          "aprovechamiento": 0.5147792325338912
         },
         {
           "seccion": "Pulpeado",
           "unidad": "kg",
-          "requerido": 850398.8192,
+          "requerido": 850398.8192105474,
           "maquinas": 2.0,
-          "aprovechamiento": 0.5147792325
+          "aprovechamiento": 0.5147792325338914
         },
         {
           "seccion": "Cocción",
           "unidad": "kg",
-          "requerido": 850398.8192,
+          "requerido": 850398.8192105474,
           "maquinas": 1.0,
-          "aprovechamiento": 0.9266026186
+          "aprovechamiento": 0.9266026185610043
         },
         {
           "seccion": "Llenado",
           "unidad": "frascos",
           "requerido": 2701630.14,
           "maquinas": 1.0,
-          "aprovechamiento": 0.8831121312
+          "aprovechamiento": 0.8831121312489673
         },
         {
           "seccion": "Etiquetado",
           "unidad": "frascos",
           "requerido": 2701630.14,
           "maquinas": 2.0,
-          "aprovechamiento": 0.8410633779
+          "aprovechamiento": 0.8410633779139272
         },
         {
           "seccion": "Pasteurizado",
           "unidad": "frascos",
           "requerido": 2701630.14,
           "maquinas": 2.0,
-          "aprovechamiento": 0.7359304557
+          "aprovechamiento": 0.7359304556746862
         }
       ]
     },
@@ -317,42 +317,42 @@
           "unidad": "kg",
           "requerido": 586959.9984,
           "maquinas": 2.0,
-          "aprovechamiento": 0.6852398367
+          "aprovechamiento": 0.6852398367453677
         },
         {
           "seccion": "Pelado",
           "unidad": "kg",
-          "requerido": 581090.3984,
+          "requerido": 581090.3984160001,
           "maquinas": 1.0,
-          "aprovechamiento": 0.6331616092
+          "aprovechamiento": 0.6331616091527198
         },
         {
           "seccion": "Descarozado",
           "unidad": "kg",
-          "requerido": 581090.3984,
+          "requerido": 581090.3984160001,
           "maquinas": 2.0,
-          "aprovechamiento": 0.9497424137
+          "aprovechamiento": 0.9497424137290796
         },
         {
           "seccion": "Cortado",
           "unidad": "kg",
-          "requerido": 522981.3586,
+          "requerido": 522981.3585744001,
           "maquinas": 1.0,
-          "aprovechamiento": 0.5698454482
+          "aprovechamiento": 0.5698454482374478
         },
         {
           "seccion": "Deshidratado",
           "unidad": "kg",
-          "requerido": 522981.3586,
+          "requerido": 522981.3585744001,
           "maquinas": 1.0,
-          "aprovechamiento": 0.3217950767
+          "aprovechamiento": 0.32179507665173523
         },
         {
           "seccion": "Envasado",
           "unidad": "bolsas",
           "requerido": 407611.11,
           "maquinas": 1.0,
-          "aprovechamiento": 0.2664821587
+          "aprovechamiento": 0.26648215873430964
         }
       ]
     },
@@ -362,44 +362,44 @@
         {
           "seccion": "Limpieza",
           "unidad": "kg",
-          "requerido": 763047.9936,
+          "requerido": 763047.9935999999,
           "maquinas": 2.0,
-          "aprovechamiento": 0.8908117827
+          "aprovechamiento": 0.8908117827256424
         },
         {
           "seccion": "Pelado",
           "unidad": "kg",
-          "requerido": 755417.5137,
+          "requerido": 755417.513664,
           "maquinas": 1.0,
-          "aprovechamiento": 0.8231100872
+          "aprovechamiento": 0.8231100872384937
         },
         {
           "seccion": "Descarozado",
           "unidad": "kg",
-          "requerido": 755417.5137,
+          "requerido": 755417.513664,
           "maquinas": 3.0,
-          "aprovechamiento": 0.8231100872
+          "aprovechamiento": 0.8231100872384937
         },
         {
           "seccion": "Cortado",
           "unidad": "kg",
-          "requerido": 679875.7623,
+          "requerido": 679875.7622976,
           "maquinas": 1.0,
-          "aprovechamiento": 0.7407990785
+          "aprovechamiento": 0.7407990785146444
         },
         {
           "seccion": "Deshidratado",
           "unidad": "kg",
-          "requerido": 679875.7623,
+          "requerido": 679875.7622976,
           "maquinas": 1.0,
-          "aprovechamiento": 0.4183335973
+          "aprovechamiento": 0.418333597278858
         },
         {
           "seccion": "Envasado",
           "unidad": "bolsas",
           "requerido": 529894.44,
           "maquinas": 1.0,
-          "aprovechamiento": 0.3464268044
+          "aprovechamiento": 0.3464268043933054
         }
       ]
     },
@@ -411,42 +411,42 @@
           "unidad": "kg",
           "requerido": 1584792.0,
           "maquinas": 2.0,
-          "aprovechamiento": 0.9250737821
+          "aprovechamiento": 0.9250737821279139
         },
         {
           "seccion": "Pelado",
           "unidad": "kg",
           "requerido": 1568944.08,
           "maquinas": 1.0,
-          "aprovechamiento": 0.8547681747
+          "aprovechamiento": 0.8547681746861925
         },
         {
           "seccion": "Descarozado",
           "unidad": "kg",
           "requerido": 1568944.08,
           "maquinas": 3.0,
-          "aprovechamiento": 0.8547681747
+          "aprovechamiento": 0.8547681746861925
         },
         {
           "seccion": "Cortado",
           "unidad": "kg",
           "requerido": 1412049.672,
           "maquinas": 1.0,
-          "aprovechamiento": 0.7692913572
+          "aprovechamiento": 0.7692913572175732
         },
         {
           "seccion": "Deshidratado",
           "unidad": "kg",
           "requerido": 1412049.672,
           "maquinas": 1.0,
-          "aprovechamiento": 0.4344233547
+          "aprovechamiento": 0.43442335466404136
         },
         {
           "seccion": "Envasado",
           "unidad": "bolsas",
           "requerido": 1100550.0,
           "maquinas": 1.0,
-          "aprovechamiento": 0.3597509153
+          "aprovechamiento": 0.3597509152719665
         }
       ]
     }
@@ -465,12 +465,12 @@
       },
       {
         "nombre": "Descarozado",
-        "m2": 5.4,
+        "m2": 5.3999999999999995,
         "maquinas": 2.0
       },
       {
         "nombre": "Pulpeado",
-        "m2": 9.45,
+        "m2": 17.082,
         "maquinas": 2.0
       },
       {
@@ -485,12 +485,12 @@
       },
       {
         "nombre": "Etiquetado",
-        "m2": 8.1,
+        "m2": 8.100000000000001,
         "maquinas": 2.0
       },
       {
         "nombre": "Pasteurizado",
-        "m2": 19.2,
+        "m2": 19.200000000000003,
         "maquinas": 2.0
       }
     ],
@@ -517,7 +517,7 @@
       },
       {
         "nombre": "Deshidratado",
-        "m2": 17.34,
+        "m2": 17.339999999999996,
         "maquinas": 1.0
       },
       {
@@ -544,10 +544,10 @@
       }
     ],
     "totales": {
-      "TOTAL MERMELADAS": 77.655,
-      "TOTAL SNACKS": 84.2145,
+      "TOTAL MERMELADAS": 85.28699999999999,
+      "TOTAL SNACKS": 84.21449999999999,
       "TOTAL AUXILIARES": 53.2125,
-      "TOTAL PRODUCTIVO NETO": 215.082
+      "TOTAL PRODUCTIVO NETO": 222.714
     }
   },
   "rel": [
@@ -591,7 +591,7 @@
       "codigo": "S07",
       "nombre": "Corte / Pulpeado (Mermeladas+Snacks)",
       "zona": "Zona Sucia",
-      "m2": 12.69
+      "m2": 20.322000000000003
     },
     {
       "codigo": "S08M",
@@ -603,7 +603,7 @@
       "codigo": "S08S",
       "nombre": "Deshidratado Snacks",
       "zona": "Zona Limpia",
-      "m2": 17.34
+      "m2": 17.339999999999996
     },
     {
       "codigo": "S09M",
@@ -621,13 +621,13 @@
       "codigo": "S10",
       "nombre": "Pasteurizado",
       "zona": "Zona Limpia",
-      "m2": 19.2
+      "m2": 19.200000000000003
     },
     {
       "codigo": "S11",
       "nombre": "Etiquetado / Empaque",
       "zona": "Zona Limpia",
-      "m2": 8.1
+      "m2": 8.100000000000001
     },
     {
       "codigo": "S12",
@@ -655,12 +655,12 @@
     }
   ],
   "carga_distancia": {
-    "C0_A": 508609.1957,
+    "C0_A": 508609.19572875847,
     "C0_E": 820.0,
-    "C0_TOTAL": 509429.1957,
-    "C1_A": 508609.1957,
+    "C0_TOTAL": 509429.19572875847,
+    "C1_A": 508609.19572875847,
     "C1_E": 660.0,
-    "C1_TOTAL": 509269.1957
+    "C1_TOTAL": 509269.19572875847
   },
   "fichas_tecnicas": {
     "mermeladas": [
@@ -999,94 +999,94 @@
       {
         "etapa": "Selección (sale)",
         "anio1": 244100.352,
-        "anio_mid": 732300.6874,
-        "anio_final": 1037425.974
+        "anio_mid": 732300.68736,
+        "anio_final": 1037425.9737600001
       },
       {
         "etapa": "Lavado (sale)",
-        "anio1": 241659.3485,
-        "anio_mid": 724977.6805,
-        "anio_final": 1027051.714
+        "anio1": 241659.34848000002,
+        "anio_mid": 724977.6804864,
+        "anio_final": 1027051.7140224001
       },
       {
         "etapa": "Pelado (sale)",
-        "anio1": 222326.6006,
-        "anio_mid": 666979.466,
-        "anio_final": 944887.5769
+        "anio1": 222326.60060160002,
+        "anio_mid": 666979.466047488,
+        "anio_final": 944887.5769006081
       },
       {
         "etapa": "Descarozado (sale)",
-        "anio1": 200093.9405,
-        "anio_mid": 600281.5194,
-        "anio_final": 850398.8192
+        "anio1": 200093.94054144,
+        "anio_mid": 600281.5194427392,
+        "anio_final": 850398.8192105474
       },
       {
         "etapa": "Cocción (sale)",
-        "anio1": 160075.1524,
-        "anio_mid": 480225.2156,
-        "anio_final": 680319.0554
+        "anio1": 160075.15243315202,
+        "anio_mid": 480225.2155541914,
+        "anio_final": 680319.0553684379
       },
       {
         "etapa": "Envasado/Llenado (kg producto)",
-        "anio1": 157674.0251,
-        "anio_mid": 473021.8373,
-        "anio_final": 670114.2695
+        "anio1": 157674.02514665475,
+        "anio_mid": 473021.8373208785,
+        "anio_final": 670114.2695379113
       },
       {
         "etapa": "Frascos resultantes (verificación)",
-        "anio1": 525580.0838,
-        "anio_mid": 1576739.458,
-        "anio_final": 2233714.232
+        "anio1": 525580.0838221825,
+        "anio_mid": 1576739.457736262,
+        "anio_final": 2233714.2317930376
       }
     ],
     "snacks": [
       {
         "etapa": "Entrada (fruta fresca)",
         "anio1": 611416.665,
-        "anio_mid": 794841.66,
+        "anio_mid": 794841.6599999999,
         "anio_final": 1650825.0
       },
       {
         "etapa": "Selección (sale)",
         "anio1": 586959.9984,
-        "anio_mid": 763047.9936,
+        "anio_mid": 763047.9935999999,
         "anio_final": 1584792.0
       },
       {
         "etapa": "Lavado (sale)",
-        "anio1": 581090.3984,
-        "anio_mid": 755417.5137,
+        "anio1": 581090.3984160001,
+        "anio_mid": 755417.513664,
         "anio_final": 1568944.08
       },
       {
         "etapa": "Pelado (sale)",
-        "anio1": 581090.3984,
-        "anio_mid": 755417.5137,
+        "anio1": 581090.3984160001,
+        "anio_mid": 755417.513664,
         "anio_final": 1568944.08
       },
       {
         "etapa": "Descarozado (sale)",
-        "anio1": 522981.3586,
-        "anio_mid": 679875.7623,
+        "anio1": 522981.3585744001,
+        "anio_mid": 679875.7622976,
         "anio_final": 1412049.672
       },
       {
         "etapa": "Deshidratado (sale)",
-        "anio1": 36608.6951,
-        "anio_mid": 47591.30336,
-        "anio_final": 98843.47704
+        "anio1": 36608.69510020798,
+        "anio_mid": 47591.30336083197,
+        "anio_final": 98843.47703999993
       },
       {
         "etapa": "Envasado (kg producto)",
-        "anio1": 36059.56467,
-        "anio_mid": 46877.43381,
-        "anio_final": 97360.82488
+        "anio1": 36059.56467370486,
+        "anio_mid": 46877.43381041949,
+        "anio_final": 97360.82488439993
       },
       {
         "etapa": "Bolsas resultantes (verificación)",
-        "anio1": 400661.8297,
-        "anio_mid": 520860.3757,
-        "anio_final": 1081786.943
+        "anio1": 400661.8297078318,
+        "anio_mid": 520860.3756713277,
+        "anio_final": 1081786.9431599993
       }
     ]
   },
